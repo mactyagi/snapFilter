@@ -19,6 +19,9 @@
 		DA4A6E3B2937B660002368E2 /* NoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A6E3A2937B660002368E2 /* NoFilter.swift */; };
 		DA4A6E3D2937BBAB002368E2 /* VideoTexturedFace.shader in Resources */ = {isa = PBXBuildFile; fileRef = DA4A6E3C2937BBAB002368E2 /* VideoTexturedFace.shader */; };
 		DA4A6E3F2937C2F3002368E2 /* GasMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A6E3E2937C2F3002368E2 /* GasMask.swift */; };
+		DA9392232948DDD900DDAC80 /* CyclopsMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9392222948DDD900DDAC80 /* CyclopsMask.swift */; };
+		DA9392252948DE0000DDAC80 /* ThorHelmet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9392242948DE0000DDAC80 /* ThorHelmet.swift */; };
+		DA9392272948DE4B00DDAC80 /* WolverineMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9392262948DE4B00DDAC80 /* WolverineMask.swift */; };
 		DAACA179293B65E5007ABB62 /* SuperHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAACA178293B65E5007ABB62 /* SuperHero.swift */; };
 		DAACA17B293B66A4007ABB62 /* Sunglasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAACA17A293B66A4007ABB62 /* Sunglasses.swift */; };
 		DAC86ED4292B4A2400CA4081 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC86ED3292B4A2400CA4081 /* AppDelegate.swift */; };
@@ -46,6 +49,9 @@
 		DA4A6E3A2937B660002368E2 /* NoFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoFilter.swift; sourceTree = "<group>"; };
 		DA4A6E3C2937BBAB002368E2 /* VideoTexturedFace.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VideoTexturedFace.shader; sourceTree = "<group>"; };
 		DA4A6E3E2937C2F3002368E2 /* GasMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasMask.swift; sourceTree = "<group>"; };
+		DA9392222948DDD900DDAC80 /* CyclopsMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclopsMask.swift; sourceTree = "<group>"; };
+		DA9392242948DE0000DDAC80 /* ThorHelmet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThorHelmet.swift; sourceTree = "<group>"; };
+		DA9392262948DE4B00DDAC80 /* WolverineMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolverineMask.swift; sourceTree = "<group>"; };
 		DAACA178293B65E5007ABB62 /* SuperHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHero.swift; sourceTree = "<group>"; };
 		DAACA17A293B66A4007ABB62 /* Sunglasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sunglasses.swift; sourceTree = "<group>"; };
 		DAC86ED0292B4A2400CA4081 /* ClientAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClientAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +113,9 @@
 				DAACA17A293B66A4007ABB62 /* Sunglasses.swift */,
 				DA4A6E3E2937C2F3002368E2 /* GasMask.swift */,
 				DA4A6E382937A511002368E2 /* Extension.swift */,
+				DA9392222948DDD900DDAC80 /* CyclopsMask.swift */,
+				DA9392262948DE4B00DDAC80 /* WolverineMask.swift */,
+				DA9392242948DE0000DDAC80 /* ThorHelmet.swift */,
 				DA12870E293DC3DB00299AEE /* Breard.swift */,
 				DA4A6E362937A46A002368E2 /* BlendShapeCharacter.swift */,
 				DA128710293DC3FA00299AEE /* Anime.swift */,
@@ -197,9 +206,11 @@
 				DAACA179293B65E5007ABB62 /* SuperHero.swift in Sources */,
 				DAC86EEB292B4A4800CA4081 /* KDCircularProgress.swift in Sources */,
 				DA12870F293DC3DB00299AEE /* Breard.swift in Sources */,
+				DA9392252948DE0000DDAC80 /* ThorHelmet.swift in Sources */,
 				DAD71779292E6608002BB9D9 /* FilterS.swift in Sources */,
 				DA4A6E3F2937C2F3002368E2 /* GasMask.swift in Sources */,
 				DAC86ED4292B4A2400CA4081 /* AppDelegate.swift in Sources */,
+				DA9392272948DE4B00DDAC80 /* WolverineMask.swift in Sources */,
 				DAC86EEC292B4A4800CA4081 /* VideoRecordingVC.swift in Sources */,
 				DA4A6E3B2937B660002368E2 /* NoFilter.swift in Sources */,
 				DAD7177B292E719C002BB9D9 /* FilterCollectionViewCell.swift in Sources */,
@@ -207,6 +218,7 @@
 				DAC86ED6292B4A2400CA4081 /* SceneDelegate.swift in Sources */,
 				DA4A6E2D2937A308002368E2 /* VirtualContent.swift in Sources */,
 				DA4A6E352937A445002368E2 /* VideoTexturedFace.swift in Sources */,
+				DA9392232948DDD900DDAC80 /* CyclopsMask.swift in Sources */,
 				DA4A6E392937A511002368E2 /* Extension.swift in Sources */,
 				DAACA17B293B66A4007ABB62 /* Sunglasses.swift in Sources */,
 				DA128711293DC3FA00299AEE /* Anime.swift in Sources */,

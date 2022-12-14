@@ -35,14 +35,14 @@ class GasMask: NSObject, VirtualContentController {
         occlusionNode.renderingOrder = -1
         
         // Add 3D asset positioned to appear as "glasses".
-        let faceOverlayContent = SCNReferenceNode(named: "gasMask")
+        let faceOverlayContent = SCNReferenceNode(named: "cyclopsMask")
         
         // Assign a random color to the text.
         let material = SCNMaterial()
         material.diffuse.contents = UIImage(named: "gas mask_Roughness")
 //        faceOverlayContent.childNode(withName: "text", recursively: true)?.geometry?.materials = [material]
         
-        faceOverlayContent.childNode(withName: "gas", recursively: true)?.geometry?.materials = [material]
+        faceOverlayContent.childNode(withName: "cyclops", recursively: true)?.geometry?.materials = [material]
         contentNode = SCNNode()
         contentNode!.addChildNode(occlusionNode)
         contentNode!.addChildNode(faceOverlayContent)

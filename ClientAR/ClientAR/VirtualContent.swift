@@ -9,7 +9,7 @@ import ARKit
 import SceneKit
 
 enum VirtualContentType: Int, CaseIterable {
-    case nothing, tattoo, anime, beard, transforms, texture, geometry, videoTexture, blendShape, gasMask, sunglasses, superhero
+    case nothing, thor, wolverine, cyclops, anime, beard, transforms, texture, geometry, videoTexture, blendShape, gasMask, sunglasses, superhero
     
     func makeController() -> VirtualContentController {
         switch self {
@@ -31,12 +31,16 @@ enum VirtualContentType: Int, CaseIterable {
             return Sunglasses()
         case .superhero:
             return SuperHero()
-        case .tattoo:
-            return Tattoo()
         case .beard:
             return Beard()
         case .anime:
             return Anime()
+        case .thor:
+            return ThorHelmet()
+        case .wolverine:
+            return WolverineMask()
+        case .cyclops:
+            return CyclopsMask()
         }
     }
     
@@ -62,12 +66,16 @@ enum VirtualContentType: Int, CaseIterable {
            return Sunglasses().getImage()
        case .superhero:
            return SuperHero().getImage()
-       case .tattoo:
-           return Tattoo().getImage()
        case .beard:
            return Beard().getImage()
        case .anime:
            return Anime().getImage()
+       case .thor:
+           return ThorHelmet().getImage()
+       case .wolverine:
+           return WolverineMask().getImage()
+       case .cyclops:
+           return CyclopsMask().getImage()
        }
     }
 }
