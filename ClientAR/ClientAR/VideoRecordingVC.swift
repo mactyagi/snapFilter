@@ -645,6 +645,8 @@ extension VideoRecordingVC: UICollectionViewDelegate, UICollectionViewDataSource
         if let indexpath = collectionView.indexPathForItem(at: centerPoint), centerCell == nil{
             index = indexpath.row
             centerCell = collectionView.cellForItem(at: indexpath) as? FilterCollectionViewCell
+            print(scrollView.decelerationRate)
+//            print(scrollView.isDragging)
             centerCell?.transformToLarge()
         }
         
