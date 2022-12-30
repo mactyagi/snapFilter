@@ -26,6 +26,11 @@
 		DA682E492957E32D00696633 /* KakashiHatake.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA682E482957E32D00696633 /* KakashiHatake.swift */; };
 		DA682E4B2957E38600696633 /* KitsuneMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA682E4A2957E38600696633 /* KitsuneMask.swift */; };
 		DA682E4D2957E3C900696633 /* SniperMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA682E4C2957E3C900696633 /* SniperMask.swift */; };
+		DA899AAD295DE0A40060F9AA /* Moustache1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899AAC295DE0A40060F9AA /* Moustache1.swift */; };
+		DA899AAF295DEC650060F9AA /* Moustache2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899AAE295DEC650060F9AA /* Moustache2.swift */; };
+		DA899AB1295DED3D0060F9AA /* Beard1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899AB0295DED3D0060F9AA /* Beard1.swift */; };
+		DA899AB3295DEEAA0060F9AA /* Beard2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899AB2295DEEAA0060F9AA /* Beard2.swift */; };
+		DA899AB5295E7E1A0060F9AA /* Goatee.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899AB4295E7E1A0060F9AA /* Goatee.swift */; };
 		DA9392232948DDD900DDAC80 /* CyclopsMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9392222948DDD900DDAC80 /* CyclopsMask.swift */; };
 		DA9392252948DE0000DDAC80 /* ThorHelmet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9392242948DE0000DDAC80 /* ThorHelmet.swift */; };
 		DA9392272948DE4B00DDAC80 /* WolverineMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9392262948DE4B00DDAC80 /* WolverineMask.swift */; };
@@ -63,6 +68,11 @@
 		DA682E482957E32D00696633 /* KakashiHatake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakashiHatake.swift; sourceTree = "<group>"; };
 		DA682E4A2957E38600696633 /* KitsuneMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitsuneMask.swift; sourceTree = "<group>"; };
 		DA682E4C2957E3C900696633 /* SniperMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SniperMask.swift; sourceTree = "<group>"; };
+		DA899AAC295DE0A40060F9AA /* Moustache1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moustache1.swift; sourceTree = "<group>"; };
+		DA899AAE295DEC650060F9AA /* Moustache2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moustache2.swift; sourceTree = "<group>"; };
+		DA899AB0295DED3D0060F9AA /* Beard1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beard1.swift; sourceTree = "<group>"; };
+		DA899AB2295DEEAA0060F9AA /* Beard2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beard2.swift; sourceTree = "<group>"; };
+		DA899AB4295E7E1A0060F9AA /* Goatee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goatee.swift; sourceTree = "<group>"; };
 		DA9392222948DDD900DDAC80 /* CyclopsMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclopsMask.swift; sourceTree = "<group>"; };
 		DA9392242948DE0000DDAC80 /* ThorHelmet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThorHelmet.swift; sourceTree = "<group>"; };
 		DA9392262948DE4B00DDAC80 /* WolverineMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolverineMask.swift; sourceTree = "<group>"; };
@@ -101,10 +111,15 @@
 				DA4A6E3E2937C2F3002368E2 /* GasMask.swift */,
 				DA9392262948DE4B00DDAC80 /* WolverineMask.swift */,
 				DA682E442957E26800696633 /* GhoulMask.swift */,
+				DA899AAC295DE0A40060F9AA /* Moustache1.swift */,
 				DA12870E293DC3DB00299AEE /* Breard.swift */,
+				DA899AB0295DED3D0060F9AA /* Beard1.swift */,
+				DA899AB2295DEEAA0060F9AA /* Beard2.swift */,
+				DA899AAE295DEC650060F9AA /* Moustache2.swift */,
 				DA682E462957E2AA00696633 /* HieMask.swift */,
 				DA682E402957DBC700696633 /* SunglassesGold.swift */,
 				DA9392222948DDD900DDAC80 /* CyclopsMask.swift */,
+				DA899AB4295E7E1A0060F9AA /* Goatee.swift */,
 				DA682E482957E32D00696633 /* KakashiHatake.swift */,
 				DA682E4A2957E38600696633 /* KitsuneMask.swift */,
 				DA682E422957DC2800696633 /* SunglassesHeart.swift */,
@@ -242,19 +257,24 @@
 				DA9392272948DE4B00DDAC80 /* WolverineMask.swift in Sources */,
 				DA682E412957DBC700696633 /* SunglassesGold.swift in Sources */,
 				DA682E4D2957E3C900696633 /* SniperMask.swift in Sources */,
+				DA899AAF295DEC650060F9AA /* Moustache2.swift in Sources */,
 				DAC86EEC292B4A4800CA4081 /* VideoRecordingVC.swift in Sources */,
 				DA4A6E3B2937B660002368E2 /* NoFilter.swift in Sources */,
 				DA682E4B2957E38600696633 /* KitsuneMask.swift in Sources */,
 				DAD7177B292E719C002BB9D9 /* FilterCollectionViewCell.swift in Sources */,
 				DA4A6E2F2937A3EA002368E2 /* TransformVisualization.swift in Sources */,
 				DA682E452957E26800696633 /* GhoulMask.swift in Sources */,
+				DA899AB3295DEEAA0060F9AA /* Beard2.swift in Sources */,
+				DA899AB5295E7E1A0060F9AA /* Goatee.swift in Sources */,
 				DAC86ED6292B4A2400CA4081 /* SceneDelegate.swift in Sources */,
 				DA4A6E2D2937A308002368E2 /* VirtualContent.swift in Sources */,
 				DA4A6E352937A445002368E2 /* VideoTexturedFace.swift in Sources */,
 				DA9392232948DDD900DDAC80 /* CyclopsMask.swift in Sources */,
 				DA682E472957E2AA00696633 /* HieMask.swift in Sources */,
+				DA899AB1295DED3D0060F9AA /* Beard1.swift in Sources */,
 				DA4A6E392937A511002368E2 /* Extension.swift in Sources */,
 				DAACA17B293B66A4007ABB62 /* Sunglasses.swift in Sources */,
+				DA899AAD295DE0A40060F9AA /* Moustache1.swift in Sources */,
 				DA128711293DC3FA00299AEE /* Anime.swift in Sources */,
 				DA682E492957E32D00696633 /* KakashiHatake.swift in Sources */,
 				DA682E432957DC2800696633 /* SunglassesHeart.swift in Sources */,

@@ -23,6 +23,10 @@
 	</dict>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>app need microphone usage</string>
+	<key>CFBundleIdentifier</key>
+	<string></string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>app need Photo Library usage to save in Library</string>
 	<key>NSCameraUsageDescription</key>
 	<string>app need camera usage</string>
 </dict>

@@ -53,7 +53,11 @@ class Beard: NSObject, VirtualContentController {
         guard let faceGeometry = occlusionNode.geometry as? ARSCNFaceGeometry,
             let faceAnchor = anchor as? ARFaceAnchor
             else { return }
-        
+        guard let childNode = node.childNode(withName: "beard", recursively: true) else {return}
+        let vertices = [faceAnchor.geometry.vertices[32]]
+        let newPos = vertices.reduce(vector_float3(), +) / Float(vertices.count)
+       
+        childNode.position.y = SCNVector3(newPos).y - childNode.boundingBox.max.y / 2 + 0.047
         faceGeometry.update(from: faceAnchor.geometry)
     }
     

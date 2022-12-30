@@ -9,7 +9,7 @@ import ARKit
 import SceneKit
 
 enum VirtualContentType: Int, CaseIterable {
-    case nothing, ghoulMask, hieMask, kakashiHatake, kitsuneMask, sniperMask, sunglassesGold, sunglassesHeart, cyclops, thor, wolverine,  anime, beard, gasMask, sunglasses, superhero, transforms, texture, geometry, videoTexture, blendShape
+    case nothing, goatee, beard2, beard1, moustache1, moustache2, ghoulMask, hieMask, kakashiHatake, kitsuneMask, sniperMask, sunglassesGold, sunglassesHeart, cyclops, thor, wolverine,  anime, beard, gasMask, sunglasses, superhero, transforms, texture, geometry, videoTexture, blendShape
     
     func makeController() -> VirtualContentController {
         switch self {
@@ -55,6 +55,16 @@ enum VirtualContentType: Int, CaseIterable {
             return KitsuneMask()
         case .sniperMask:
             return SniperMask()
+        case .moustache1:
+            return Moustache1()
+        case .moustache2:
+            return Moustache2()
+        case .beard1:
+            return Beard1()
+        case .beard2:
+            return Beard2()
+        case .goatee:
+            return Goatee()
         }
     }
     
@@ -104,6 +114,16 @@ enum VirtualContentType: Int, CaseIterable {
            return KitsuneMask().getImage()
        case .sniperMask:
            return SniperMask().getImage()
+       case .moustache1:
+           return Moustache1().getImage()
+       case .moustache2:
+           return Moustache2().getImage()
+       case .beard1:
+           return Beard1().getImage()
+       case .beard2:
+           return Beard2().getImage()
+       case .goatee:
+           return Goatee().getImage()
        }
     }
 }

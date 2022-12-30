@@ -23,10 +23,13 @@ class TexturedFace: NSObject, VirtualContentController {
         let faceGeometry = ARSCNFaceGeometry(device: sceneView.device!)!
         let material = faceGeometry.firstMaterial!
         
+        
 //        material.diffuse.contents = #imageLiteral(resourceName: "wireframeTexture") // Example texture map image.
-        material.diffuse.contents = UIImage(named: "t2")
+//        material.diffuse.contents = UIImage(named: "t2")
+        
+
         material.lightingModel = .physicallyBased
-        faceGeometry.firstMaterial?.fillMode = .fill
+        faceGeometry.firstMaterial?.fillMode = .lines
         
         contentNode = SCNNode(geometry: faceGeometry)
         #endif
@@ -38,6 +41,23 @@ class TexturedFace: NSObject, VirtualContentController {
         guard let faceGeometry = node.geometry as? ARSCNFaceGeometry,
             let faceAnchor = anchor as? ARFaceAnchor
             else { return }
+        var a = true
+        if (a){
+            a = false
+//            for index in 0..<faceAnchor.geometry.vertices.count{
+//                    let text = SCNText(string: String(index), extrusionDepth: 4)
+//                    let material = SCNMaterial()
+//                    material.diffuse.contents = UIColor.green
+//                    material.specular.contents = UIColor.green
+//                    text.materials = [material]
+//                    let newNode = SCNNode()
+//                    newNode.position =  SCNVector3Make(faceAnchor.geometry.vertices[index].x*1.0,faceAnchor.geometry.vertices[index].y*1.0,faceAnchor.geometry.vertices[index].z)
+//                    newNode.scale = SCNVector3(x:0.00025, y:0.00025, z:0.0001)
+//                    newNode.geometry = text
+//                    node.addChildNode(newNode)
+//                }
+        }
+        
         
         faceGeometry.update(from: faceAnchor.geometry)
     }

@@ -11,8 +11,9 @@ import MobileCoreServices
 import AVKit
 import ARKit
 import SceneKit
+import Photos
 
-class VideoRecordingVC: UIViewController, AVCaptureFileOutputRecordingDelegate
+class VideoRecordingVC: UIViewController //, AVCaptureFileOutputRecordingDelegate
 {
     //MARK: - IBOutlet
     @IBOutlet weak var mainView: UIView!
@@ -24,6 +25,14 @@ class VideoRecordingVC: UIViewController, AVCaptureFileOutputRecordingDelegate
     var filterArray : [VirtualContentType] = []
     
     var faceAnchorsAndContentControllers: [ARFaceAnchor: VirtualContentController] = [:]
+    
+    var snapshotArray:[[String:Any]] = [[String:Any]]()
+    var lastTime:TimeInterval = 0
+    var isRecording:Bool = false;
+    
+    var pixelBufferAdaptor:AVAssetWriterInputPixelBufferAdaptor?
+    var videoInput:AVAssetWriterInput?;
+    var assetWriter:AVAssetWriter?;
     
     var selectedVirtualContent: VirtualContentType? {
         didSet {
@@ -138,8 +147,8 @@ class VideoRecordingVC: UIViewController, AVCaptureFileOutputRecordingDelegate
         viewMainPregress.set(colors: UIColor.red)
         viewMainPregress.trackColor = .white
         
-        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPressed))
-        btnStartREpo.addGestureRecognizer(longPressRecognizer)
+//        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPressed))
+//        btnStartREpo.addGestureRecognizer(longPressRecognizer)
         self.isFrontCamera = true
         // Do any additional setup after loading the view.
     }
@@ -150,6 +159,224 @@ class VideoRecordingVC: UIViewController, AVCaptureFileOutputRecordingDelegate
         
         
     }
+    
+    // Button Functionality
+    func startRecording() {
+        self.lastTime = 0;
+        self.isRecording = true;
+    }
+        
+    func stopRecording() {
+        self.isRecording = false;
+        self.saveVideo(withName: "test", imageArray: self.snapshotArray, fps: 30, size: CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height));
+    }
+    
+    public func didUpdateAtTime(time: TimeInterval) {
+            
+            if self.isRecording {
+                if self.lastTime == 0 || (self.lastTime + 1/31) < time {
+                    DispatchQueue.main.async { [weak self] () -> Void in
+                        
+                        print("UPDATE AT TIME : \(time)");
+                        guard self != nil else { return }
+                        self!.lastTime = time;
+                        let snapshot:UIImage = self!.sceneView.snapshot()
+                        
+                        let scale = CMTimeScale(NSEC_PER_SEC)
+                        
+                        self!.snapshotArray.append([
+                            "image":snapshot,
+                            "time": CMTime(value: CMTimeValue((self?.sceneView.session.currentFrame!.timestamp)! * Double(scale)), timescale: scale)
+                        ]);
+                        
+                    }
+                }
+            }
+        }
+    
+    
+    // MARK: SAVE VIDEO FUNCTIONALITY
+    public func saveVideo(withName:String, imageArray:[[String:Any]], fps:Int, size:CGSize) {
+            
+            self.createURLForVideo(withName: withName) { (videoURL) in
+                self.prepareWriterAndInput(imageArray:imageArray, size:size, videoURL: videoURL, completionHandler: { (error) in
+                    
+                    guard error == nil else {
+                        // it errored.
+                        return
+                    }
+                    
+                    self.createVideo(imageArray: imageArray, fps: fps, size:size, completionHandler: { _ in
+                        print("[F] saveVideo :: DONE");
+                        
+                        guard error == nil else {
+                            // it errored.
+                            return
+                        }
+                        
+                        self.finishVideoRecordingAndSave();
+                        
+                    });
+                });
+            }
+            
+        }
+        
+        private func createURLForVideo(withName:String, completionHandler:@escaping (URL)->()) {
+            // Clear the location for the temporary file.
+            let temporaryDirectoryURL:URL = URL.init(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true);
+            let targetURL:URL = temporaryDirectoryURL.appendingPathComponent("\(withName).mp4")
+            // Delete the file, incase it exists.
+            do {
+                try FileManager.default.removeItem(at: targetURL);
+                
+            } catch let error {
+                NSLog("Unable to delete file, with error: \(error)")
+            }
+            // return the URL
+            completionHandler(targetURL);
+        }
+        
+        private func prepareWriterAndInput(imageArray:[[String:Any]], size:CGSize, videoURL:URL, completionHandler:@escaping(Error?)->()) {
+            
+            do {
+                self.assetWriter = try AVAssetWriter(outputURL: videoURL, fileType: AVFileType.mp4)
+                
+                let videoOutputSettings: Dictionary<String, Any> = [
+                    AVVideoCodecKey : AVVideoCodecType.h264,
+                    AVVideoWidthKey : size.width,
+                    AVVideoHeightKey : size.height
+                ];
+        
+                self.videoInput  = AVAssetWriterInput (mediaType: AVMediaType.video, outputSettings: videoOutputSettings)
+                self.videoInput!.expectsMediaDataInRealTime = true
+                self.assetWriter!.add(self.videoInput!)
+                
+                // Create Pixel buffer Adaptor
+                
+                let sourceBufferAttributes:[String : Any] = [
+                    (kCVPixelBufferPixelFormatTypeKey as String): Int(kCVPixelFormatType_32ARGB),
+                    (kCVPixelBufferWidthKey as String): Float(size.width),
+                    (kCVPixelBufferHeightKey as String): Float(size.height)] as [String : Any]
+                
+                self.pixelBufferAdaptor = AVAssetWriterInputPixelBufferAdaptor(assetWriterInput: self.videoInput!, sourcePixelBufferAttributes: sourceBufferAttributes);
+        
+                self.assetWriter?.startWriting();
+                self.assetWriter?.startSession(atSourceTime: CMTime.zero);
+                completionHandler(nil);
+            }
+            catch {
+                print("Failed to create assetWritter with error : \(error)");
+                completionHandler(error);
+            }
+        }
+        
+        private func createVideo(imageArray:[[String:Any]], fps:Int, size:CGSize, completionHandler:@escaping(String?)->()) {
+            
+            var currentframeTime:CMTime = CMTime.zero;
+            var currentFrame:Int = 0;
+            
+            let startTime:CMTime = (imageArray[0])["time"] as! CMTime;
+            
+            while (currentFrame < imageArray.count) {
+                
+                // When the video input is ready for more media data...
+                if (self.videoInput?.isReadyForMoreMediaData)!  {
+                    print("processing current frame :: \(currentFrame)");
+                    // Get current CG Image
+                    let currentImage:UIImage = (imageArray[currentFrame])["image"] as! UIImage;
+                    let currentCGImage:CGImage? = currentImage.cgImage;
+                    
+                    guard currentCGImage != nil else {
+                        completionHandler("failed to get current cg image");
+                        return
+                    }
+                    
+                    // Create the pixel buffer
+                    self.createPixelBufferFromUIImage(image: currentImage) { (error, pixelBuffer) in
+                        
+                        guard error == nil else {
+                            completionHandler("failed to get pixelBuffer");
+                            return
+                        }
+                        
+                        // Calc the current frame time
+                        currentframeTime = (imageArray[currentFrame])["time"] as! CMTime - startTime;
+                        
+                        print("SECONDS : \(currentframeTime.seconds)")
+                        
+                        print("Current frame time :: \(currentframeTime)");
+                        
+                        // Add pixel buffer to video input
+                        self.pixelBufferAdaptor!.append(pixelBuffer!, withPresentationTime: currentframeTime);
+                        
+                        // increment frame
+                        currentFrame += 1;
+                    }
+                }
+            }
+            
+            // FINISHED
+            completionHandler(nil);
+        }
+        
+        
+        private func createPixelBufferFromUIImage(image:UIImage, completionHandler:@escaping(String?, CVPixelBuffer?) -> ()) {
+            //https://stackoverflow.com/questions/44400741/convert-image-to-cvpixelbuffer-for-machine-learning-swift
+            let attrs = [kCVPixelBufferCGImageCompatibilityKey: kCFBooleanTrue, kCVPixelBufferCGBitmapContextCompatibilityKey: kCFBooleanTrue] as CFDictionary
+            var pixelBuffer : CVPixelBuffer?
+            let status = CVPixelBufferCreate(kCFAllocatorDefault, Int(image.size.width), Int(image.size.height), kCVPixelFormatType_32ARGB, attrs, &pixelBuffer)
+            guard (status == kCVReturnSuccess) else {
+                completionHandler("Failed to create pixel buffer", nil)
+                return
+            }
+            
+            CVPixelBufferLockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
+            let pixelData = CVPixelBufferGetBaseAddress(pixelBuffer!)
+            
+            let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
+            let context = CGContext(data: pixelData, width: Int(image.size.width), height: Int(image.size.height), bitsPerComponent: 8, bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer!), space: rgbColorSpace, bitmapInfo: CGImageAlphaInfo.noneSkipFirst.rawValue)
+            
+            context?.translateBy(x: 0, y: image.size.height)
+            context?.scaleBy(x: 1.0, y: -1.0)
+            
+            UIGraphicsPushContext(context!)
+            image.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
+            UIGraphicsPopContext()
+            CVPixelBufferUnlockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
+            
+            completionHandler(nil, pixelBuffer)
+        }
+        
+        
+        private func finishVideoRecordingAndSave() {
+            self.videoInput!.markAsFinished();
+            self.assetWriter?.finishWriting(completionHandler: {
+                print("output url : \(self.assetWriter?.outputURL)");
+                
+                PHPhotoLibrary.requestAuthorization({ (status) in
+                    PHPhotoLibrary.shared().performChanges({
+                        PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: (self.assetWriter?.outputURL)!)
+                    }) { saved, error in
+                        
+                        if saved {
+                            let alertController = UIAlertController(title: "Your video was successfully saved", message: nil, preferredStyle: .alert)
+                            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            alertController.addAction(defaultAction)
+                            DispatchQueue.main.async {
+                                self.present(alertController, animated: true, completion: nil)
+                            }
+                            
+                        }
+                        // Clear the original array
+                        self.snapshotArray.removeAll();
+                        // Clear memory
+                        FileManager.default.clearTmpDirectory();
+                    }
+                })
+            })
+        }
+
     
     func addVirtualContentTypeInArray(){
         for virtual in VirtualContentType.allCases{
@@ -285,151 +512,151 @@ class VideoRecordingVC: UIViewController, AVCaptureFileOutputRecordingDelegate
         return nil
     }
     
-    func startRecording() {
-        
-        if movieOutput.isRecording == false {
-            
-            let connection = movieOutput.connection(with: AVMediaType.video)
-            
-            if (connection?.isVideoOrientationSupported)! {
-                connection?.videoOrientation = .portrait
-            }
-            
-            if (connection?.isVideoStabilizationSupported)! {
-                connection?.preferredVideoStabilizationMode = AVCaptureVideoStabilizationMode.auto
-            }
-            
-            let device = activeInput.device
-            
-            if (device.isSmoothAutoFocusSupported) {
-                
-                do {
-                    try device.lockForConfiguration()
-                    device.isSmoothAutoFocusEnabled = false
-                    device.unlockForConfiguration()
-                } catch {
-                    print("Error setting configuration: \(error)")
-                }
-                
-            }
-            
-            //EDIT2: And I forgot this
-            outputURL = tempURL()
-            movieOutput.startRecording(to: outputURL, recordingDelegate: self)
-            
-        }
-        else {
-            stopRecording()
-        }
-        
-    }
+//    func startRecording() {
+//
+//        if movieOutput.isRecording == false {
+//
+//            let connection = movieOutput.connection(with: AVMediaType.video)
+//
+//            if (connection?.isVideoOrientationSupported)! {
+//                connection?.videoOrientation = .portrait
+//            }
+//
+//            if (connection?.isVideoStabilizationSupported)! {
+//                connection?.preferredVideoStabilizationMode = AVCaptureVideoStabilizationMode.auto
+//            }
+//
+//            let device = activeInput.device
+//
+//            if (device.isSmoothAutoFocusSupported) {
+//
+//                do {
+//                    try device.lockForConfiguration()
+//                    device.isSmoothAutoFocusEnabled = false
+//                    device.unlockForConfiguration()
+//                } catch {
+//                    print("Error setting configuration: \(error)")
+//                }
+//
+//            }
+//
+//            //EDIT2: And I forgot this
+//            outputURL = tempURL()
+//            movieOutput.startRecording(to: outputURL, recordingDelegate: self)
+//
+//        }
+//        else {
+//            stopRecording()
+//        }
+//
+//    }
     
-    func stopRecording() {
-        
-        if movieOutput.isRecording == true {
-            movieOutput.stopRecording()
-        }
-    }
+//    func stopRecording() {
+//
+//        if movieOutput.isRecording == true {
+//            movieOutput.stopRecording()
+//        }
+//    }
     
-    func capture(_ captureOutput: AVCaptureFileOutput!, didStartRecordingToOutputFileAt fileURL: URL!, fromConnections connections: [Any]!) {
-        
-    }
+//    func capture(_ captureOutput: AVCaptureFileOutput!, didStartRecordingToOutputFileAt fileURL: URL!, fromConnections connections: [Any]!) {
+//
+//    }
     
-    func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
-        
-        if (error != nil) {
-            
-            print("Error recording movie: \(error!.localizedDescription)")
-            
-        } else {
-            
-            let videoRecorded = outputURL! as URL
-            
-//            let editViewVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "EditRecordingVideoVC") as! EditRecordingVideoVC
-//            editViewVC.VideoURL = self.recoderURL
-//            self.navigationController?.pushViewController(editViewVC, animated: true)
-          
-        }
-        
-    }
+//    func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
+//
+//        if (error != nil) {
+//
+//            print("Error recording movie: \(error!.localizedDescription)")
+//
+//        } else {
+//
+//            let videoRecorded = outputURL! as URL
+//
+////            let editViewVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "EditRecordingVideoVC") as! EditRecordingVideoVC
+////            editViewVC.VideoURL = self.recoderURL
+////            self.navigationController?.pushViewController(editViewVC, animated: true)
+//
+//        }
+//
+//    }
     
     
-    @objc func longPressed(sender: UILongPressGestureRecognizer)
-    {
-        print("longpressed")
-        
-        if sender.state == .began
-        {
-            startRecording()
-            isStartRecrding = false
-            
-            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
-            
-            lblCount.isHidden = false
-            
-            viewBig.isHidden = false
-            viewSmall.isHidden = true
-            
-            // start the timer
-            
-            viewMainPregress.animate(fromAngle: 0, toAngle: 360, duration: 44) { completed in
-                if completed {
-                    print("animation stopped, completed")
-                    print("Done")
-                    // self.stopRecording()
-                    self.timer.invalidate()
-                    
-                    UIView.animate(withDuration: 3, animations: { () -> Void in
-                        //                        let editViewVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "EditRecordingVideoVC") as! EditRecordingVideoVC
-                        //                        editViewVC.VideoURL = self.recoderURL
-                        //                        self.navigationController?.pushViewController(editViewVC, animated: true)
-                    })
-                    
-                } else {
-                    print("animation stopped, was interrupted")
-                }
-            }
-        }
-        else if sender.state == .ended
-        {
-            stopRecording()
-            timer.invalidate()
-            
-            UIView.animate(withDuration: 3, animations: { () -> Void in
-                
-            })
-            
-        }
-        
-    }
+//    @objc func longPressed(sender: UILongPressGestureRecognizer)
+//    {
+//        print("longpressed")
+//
+//        if sender.state == .began
+//        {
+//            startRecording()
+//            isStartRecrding = false
+//
+//            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+//
+//            lblCount.isHidden = false
+//
+//            viewBig.isHidden = false
+//            viewSmall.isHidden = true
+//
+//            // start the timer
+//
+//            viewMainPregress.animate(fromAngle: 0, toAngle: 360, duration: 44) { completed in
+//                if completed {
+//                    print("animation stopped, completed")
+//                    print("Done")
+//                    // self.stopRecording()
+//                    self.timer.invalidate()
+//
+//                    UIView.animate(withDuration: 3, animations: { () -> Void in
+//                        //                        let editViewVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "EditRecordingVideoVC") as! EditRecordingVideoVC
+//                        //                        editViewVC.VideoURL = self.recoderURL
+//                        //                        self.navigationController?.pushViewController(editViewVC, animated: true)
+//                    })
+//
+//                } else {
+//                    print("animation stopped, was interrupted")
+//                }
+//            }
+//        }
+//        else if sender.state == .ended
+//        {
+//            stopRecording()
+//            timer.invalidate()
+//
+//            UIView.animate(withDuration: 3, animations: { () -> Void in
+//
+//            })
+//
+//        }
+//
+//    }
     
-    @objc func updateCounter() {
-        //example functionality
-        if counter != 1
-        {
-            counter -= 1
-            lblCount.text = "\(counter)"
-        }
-        else
-        {
-            stopRecording()
-            timer.invalidate()
-            
-            UIView.animate(withDuration: 3, animations: { () -> Void in
-                
-            })
-            
-        }
-    }
+//    @objc func updateCounter() {
+//        //example functionality
+//        if counter != 1
+//        {
+//            counter -= 1
+//            lblCount.text = "\(counter)"
+//        }
+//        else
+//        {
+//            stopRecording()
+//            timer.invalidate()
+//
+//            UIView.animate(withDuration: 3, animations: { () -> Void in
+//
+//            })
+//
+//        }
+//    }
     
     //MARK: - Video Recording Method
     
     
     //MARK: - Action Method
-    @IBAction func clickedVideoCReate(_ sender: Any) {
-        
-        
-    }
+//    @IBAction func clickedVideoCReate(_ sender: Any) {
+//
+//
+//    }
     
     
     @IBAction func clickedCancel(_ sender: Any) {
@@ -621,7 +848,12 @@ extension VideoRecordingVC: ARSCNViewDelegate {
         
         faceAnchorsAndContentControllers[faceAnchor] = nil
     }
+    
+    func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
+        didUpdateAtTime(time: time)
+    }
 }
+
 
 
 extension VideoRecordingVC: UICollectionViewDelegate, UICollectionViewDataSource{
@@ -665,6 +897,13 @@ extension VideoRecordingVC: UICollectionViewDelegate, UICollectionViewDataSource
         if let centerCell = centerCell{
             if centerCell == collectionView.cellForItem(at: indexPath){
                 print("yes")
+                if isRecording{
+                    stopRecording()
+                }else{
+                    startRecording()
+                }
+               
+                
             }
         }
     }
@@ -699,3 +938,21 @@ final class MyCollectionViewFlowLayout: UICollectionViewFlowLayout{
     }
 }
 
+
+
+
+
+extension FileManager {
+    func clearTmpDirectory() {
+        do {
+            let tmpDirURL = FileManager.default.temporaryDirectory
+            let tmpDirectory = try contentsOfDirectory(atPath: tmpDirURL.path)
+            try tmpDirectory.forEach { file in
+                let fileUrl = tmpDirURL.appendingPathComponent(file)
+                try removeItem(atPath: fileUrl.path)
+            }
+        } catch {
+           //catch the error somehow
+        }
+    }
+}
