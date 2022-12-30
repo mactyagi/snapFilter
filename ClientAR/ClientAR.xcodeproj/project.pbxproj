@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090C53ADD0BAA32CFEF0B689 /* Pods_ClientAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E856DD506B3A17FF8346AF4 /* Pods_ClientAR.framework */; };
 		DA12870F293DC3DB00299AEE /* Breard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA12870E293DC3DB00299AEE /* Breard.swift */; };
 		DA128711293DC3FA00299AEE /* Anime.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA128710293DC3FA00299AEE /* Anime.swift */; };
 		DA4A6E2D2937A308002368E2 /* VirtualContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A6E2C2937A308002368E2 /* VirtualContent.swift */; };
@@ -59,6 +60,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24DB512A808BEACB9C4BEF30 /* Pods-ClientAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClientAR.release.xcconfig"; path = "Target Support Files/Pods-ClientAR/Pods-ClientAR.release.xcconfig"; sourceTree = "<group>"; };
+		3D8B762083101535CD62DE2C /* Pods-ClientAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClientAR.debug.xcconfig"; path = "Target Support Files/Pods-ClientAR/Pods-ClientAR.debug.xcconfig"; sourceTree = "<group>"; };
+		3E856DD506B3A17FF8346AF4 /* Pods_ClientAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClientAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA12870E293DC3DB00299AEE /* Breard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breard.swift; sourceTree = "<group>"; };
 		DA128710293DC3FA00299AEE /* Anime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
 		DA4A6E2C2937A308002368E2 /* VirtualContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualContent.swift; sourceTree = "<group>"; };
@@ -117,12 +121,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				090C53ADD0BAA32CFEF0B689 /* Pods_ClientAR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ABB78EB005F780EE8E107405 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D8B762083101535CD62DE2C /* Pods-ClientAR.debug.xcconfig */,
+				24DB512A808BEACB9C4BEF30 /* Pods-ClientAR.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DA682E3F2957DB7B00696633 /* ModelClasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +180,8 @@
 			children = (
 				DAC86ED2292B4A2400CA4081 /* ClientAR */,
 				DAC86ED1292B4A2400CA4081 /* Products */,
+				ABB78EB005F780EE8E107405 /* Pods */,
+				F455F69E1325ABBB12B7450B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -204,6 +221,14 @@
 			path = ClientAR;
 			sourceTree = "<group>";
 		};
+		F455F69E1325ABBB12B7450B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E856DD506B3A17FF8346AF4 /* Pods_ClientAR.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -211,9 +236,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DAC86EE4292B4A2600CA4081 /* Build configuration list for PBXNativeTarget "ClientAR" */;
 			buildPhases = (
+				EED10105F91175679E370CF3 /* [CP] Check Pods Manifest.lock */,
 				DAC86ECC292B4A2400CA4081 /* Sources */,
 				DAC86ECD292B4A2400CA4081 /* Frameworks */,
 				DAC86ECE292B4A2400CA4081 /* Resources */,
+				0BEA6853FAC04E5DFD453F7B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -240,7 +267,7 @@
 				};
 			};
 			buildConfigurationList = DAC86ECB292B4A2400CA4081 /* Build configuration list for PBXProject "ClientAR" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -271,6 +298,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BEA6853FAC04E5DFD453F7B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ClientAR/Pods-ClientAR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ClientAR/Pods-ClientAR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ClientAR/Pods-ClientAR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EED10105F91175679E370CF3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ClientAR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DAC86ECC292B4A2400CA4081 /* Sources */ = {
@@ -454,6 +523,7 @@
 		};
 		DAC86EE5292B4A2600CA4081 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D8B762083101535CD62DE2C /* Pods-ClientAR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -482,6 +552,7 @@
 		};
 		DAC86EE6292B4A2600CA4081 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DB512A808BEACB9C4BEF30 /* Pods-ClientAR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
