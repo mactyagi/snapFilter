@@ -31,6 +31,16 @@
 		DA899AB1295DED3D0060F9AA /* Beard1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899AB0295DED3D0060F9AA /* Beard1.swift */; };
 		DA899AB3295DEEAA0060F9AA /* Beard2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899AB2295DEEAA0060F9AA /* Beard2.swift */; };
 		DA899AB5295E7E1A0060F9AA /* Goatee.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899AB4295E7E1A0060F9AA /* Goatee.swift */; };
+		DA899AB7295F10FF0060F9AA /* Beauty1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899AB6295F10FF0060F9AA /* Beauty1.swift */; };
+		DA899AB9295F11690060F9AA /* Beauty2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899AB8295F11690060F9AA /* Beauty2.swift */; };
+		DA899ABB295F117C0060F9AA /* Beauty3.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899ABA295F117C0060F9AA /* Beauty3.swift */; };
+		DA899ABD295F118D0060F9AA /* Beauty4.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899ABC295F118D0060F9AA /* Beauty4.swift */; };
+		DA899ABF295F119F0060F9AA /* Beauty5.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899ABE295F119F0060F9AA /* Beauty5.swift */; };
+		DA899AC1295F11B00060F9AA /* Beauty6.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899AC0295F11B00060F9AA /* Beauty6.swift */; };
+		DA899AC3295F11C30060F9AA /* Beauty7.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899AC2295F11C30060F9AA /* Beauty7.swift */; };
+		DA899AC5295F11D30060F9AA /* Beauty8.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899AC4295F11D30060F9AA /* Beauty8.swift */; };
+		DA899AC7295F11E50060F9AA /* Beauty9.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899AC6295F11E50060F9AA /* Beauty9.swift */; };
+		DA899AC9295F11F70060F9AA /* Beauty10.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899AC8295F11F70060F9AA /* Beauty10.swift */; };
 		DA9392232948DDD900DDAC80 /* CyclopsMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9392222948DDD900DDAC80 /* CyclopsMask.swift */; };
 		DA9392252948DE0000DDAC80 /* ThorHelmet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9392242948DE0000DDAC80 /* ThorHelmet.swift */; };
 		DA9392272948DE4B00DDAC80 /* WolverineMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9392262948DE4B00DDAC80 /* WolverineMask.swift */; };
@@ -73,6 +83,16 @@
 		DA899AB0295DED3D0060F9AA /* Beard1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beard1.swift; sourceTree = "<group>"; };
 		DA899AB2295DEEAA0060F9AA /* Beard2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beard2.swift; sourceTree = "<group>"; };
 		DA899AB4295E7E1A0060F9AA /* Goatee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goatee.swift; sourceTree = "<group>"; };
+		DA899AB6295F10FF0060F9AA /* Beauty1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beauty1.swift; sourceTree = "<group>"; };
+		DA899AB8295F11690060F9AA /* Beauty2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beauty2.swift; sourceTree = "<group>"; };
+		DA899ABA295F117C0060F9AA /* Beauty3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beauty3.swift; sourceTree = "<group>"; };
+		DA899ABC295F118D0060F9AA /* Beauty4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beauty4.swift; sourceTree = "<group>"; };
+		DA899ABE295F119F0060F9AA /* Beauty5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beauty5.swift; sourceTree = "<group>"; };
+		DA899AC0295F11B00060F9AA /* Beauty6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beauty6.swift; sourceTree = "<group>"; };
+		DA899AC2295F11C30060F9AA /* Beauty7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beauty7.swift; sourceTree = "<group>"; };
+		DA899AC4295F11D30060F9AA /* Beauty8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beauty8.swift; sourceTree = "<group>"; };
+		DA899AC6295F11E50060F9AA /* Beauty9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beauty9.swift; sourceTree = "<group>"; };
+		DA899AC8295F11F70060F9AA /* Beauty10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beauty10.swift; sourceTree = "<group>"; };
 		DA9392222948DDD900DDAC80 /* CyclopsMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclopsMask.swift; sourceTree = "<group>"; };
 		DA9392242948DE0000DDAC80 /* ThorHelmet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThorHelmet.swift; sourceTree = "<group>"; };
 		DA9392262948DE4B00DDAC80 /* WolverineMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolverineMask.swift; sourceTree = "<group>"; };
@@ -109,7 +129,17 @@
 				DAACA178293B65E5007ABB62 /* SuperHero.swift */,
 				DAACA17A293B66A4007ABB62 /* Sunglasses.swift */,
 				DA4A6E3E2937C2F3002368E2 /* GasMask.swift */,
+				DA899AB6295F10FF0060F9AA /* Beauty1.swift */,
 				DA9392262948DE4B00DDAC80 /* WolverineMask.swift */,
+				DA899AB8295F11690060F9AA /* Beauty2.swift */,
+				DA899ABA295F117C0060F9AA /* Beauty3.swift */,
+				DA899ABC295F118D0060F9AA /* Beauty4.swift */,
+				DA899ABE295F119F0060F9AA /* Beauty5.swift */,
+				DA899AC0295F11B00060F9AA /* Beauty6.swift */,
+				DA899AC2295F11C30060F9AA /* Beauty7.swift */,
+				DA899AC4295F11D30060F9AA /* Beauty8.swift */,
+				DA899AC6295F11E50060F9AA /* Beauty9.swift */,
+				DA899AC8295F11F70060F9AA /* Beauty10.swift */,
 				DA682E442957E26800696633 /* GhoulMask.swift */,
 				DA899AAC295DE0A40060F9AA /* Moustache1.swift */,
 				DA12870E293DC3DB00299AEE /* Breard.swift */,
@@ -247,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA899AC9295F11F70060F9AA /* Beauty10.swift in Sources */,
 				DAACA179293B65E5007ABB62 /* SuperHero.swift in Sources */,
 				DAC86EEB292B4A4800CA4081 /* KDCircularProgress.swift in Sources */,
 				DA12870F293DC3DB00299AEE /* Breard.swift in Sources */,
@@ -256,21 +287,29 @@
 				DAC86ED4292B4A2400CA4081 /* AppDelegate.swift in Sources */,
 				DA9392272948DE4B00DDAC80 /* WolverineMask.swift in Sources */,
 				DA682E412957DBC700696633 /* SunglassesGold.swift in Sources */,
+				DA899AC3295F11C30060F9AA /* Beauty7.swift in Sources */,
+				DA899AB7295F10FF0060F9AA /* Beauty1.swift in Sources */,
 				DA682E4D2957E3C900696633 /* SniperMask.swift in Sources */,
 				DA899AAF295DEC650060F9AA /* Moustache2.swift in Sources */,
 				DAC86EEC292B4A4800CA4081 /* VideoRecordingVC.swift in Sources */,
+				DA899ABF295F119F0060F9AA /* Beauty5.swift in Sources */,
 				DA4A6E3B2937B660002368E2 /* NoFilter.swift in Sources */,
+				DA899AC5295F11D30060F9AA /* Beauty8.swift in Sources */,
 				DA682E4B2957E38600696633 /* KitsuneMask.swift in Sources */,
 				DAD7177B292E719C002BB9D9 /* FilterCollectionViewCell.swift in Sources */,
+				DA899AB9295F11690060F9AA /* Beauty2.swift in Sources */,
 				DA4A6E2F2937A3EA002368E2 /* TransformVisualization.swift in Sources */,
 				DA682E452957E26800696633 /* GhoulMask.swift in Sources */,
 				DA899AB3295DEEAA0060F9AA /* Beard2.swift in Sources */,
 				DA899AB5295E7E1A0060F9AA /* Goatee.swift in Sources */,
 				DAC86ED6292B4A2400CA4081 /* SceneDelegate.swift in Sources */,
+				DA899ABD295F118D0060F9AA /* Beauty4.swift in Sources */,
+				DA899AC1295F11B00060F9AA /* Beauty6.swift in Sources */,
 				DA4A6E2D2937A308002368E2 /* VirtualContent.swift in Sources */,
 				DA4A6E352937A445002368E2 /* VideoTexturedFace.swift in Sources */,
 				DA9392232948DDD900DDAC80 /* CyclopsMask.swift in Sources */,
 				DA682E472957E2AA00696633 /* HieMask.swift in Sources */,
+				DA899AC7295F11E50060F9AA /* Beauty9.swift in Sources */,
 				DA899AB1295DED3D0060F9AA /* Beard1.swift in Sources */,
 				DA4A6E392937A511002368E2 /* Extension.swift in Sources */,
 				DAACA17B293B66A4007ABB62 /* Sunglasses.swift in Sources */,
@@ -279,6 +318,7 @@
 				DA682E492957E32D00696633 /* KakashiHatake.swift in Sources */,
 				DA682E432957DC2800696633 /* SunglassesHeart.swift in Sources */,
 				DA4A6E312937A409002368E2 /* TexturedFace.swift in Sources */,
+				DA899ABB295F117C0060F9AA /* Beauty3.swift in Sources */,
 				DA4A6E332937A428002368E2 /* FaceOcclusionOverlay.swift in Sources */,
 				DA4A6E372937A46A002368E2 /* BlendShapeCharacter.swift in Sources */,
 			);

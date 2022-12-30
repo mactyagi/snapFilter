@@ -9,7 +9,7 @@ import ARKit
 import SceneKit
 
 enum VirtualContentType: Int, CaseIterable {
-    case nothing, goatee, beard2, beard1, moustache1, moustache2, ghoulMask, hieMask, kakashiHatake, kitsuneMask, sniperMask, sunglassesGold, sunglassesHeart, cyclops, thor, wolverine,  anime, beard, gasMask, sunglasses, superhero, transforms, texture, geometry, videoTexture, blendShape
+    case nothing, beauty1, beauty2, beauty3, beauty4, beauty5, beauty6, beauty7, beauty8, beauty9, beauty10, goatee, beard2, beard1, moustache1, moustache2, ghoulMask, hieMask, kakashiHatake, kitsuneMask, sniperMask, sunglassesGold, sunglassesHeart, cyclops, thor, wolverine,  anime, beard, gasMask, sunglasses, superhero, transforms, texture, geometry, videoTexture, blendShape
     
     func makeController() -> VirtualContentController {
         switch self {
@@ -65,6 +65,26 @@ enum VirtualContentType: Int, CaseIterable {
             return Beard2()
         case .goatee:
             return Goatee()
+        case .beauty1:
+            return Beauty1()
+        case .beauty2:
+            return Beauty2()
+        case .beauty3:
+            return Beauty3()
+        case .beauty4:
+            return Beauty4()
+        case .beauty5:
+            return Beauty5()
+        case .beauty6:
+            return Beauty6()
+        case .beauty7:
+            return Beauty7()
+        case .beauty8:
+            return Beauty8()
+        case .beauty9:
+            return Beauty9()
+        case .beauty10:
+            return Beauty10()
         }
     }
     
@@ -124,6 +144,26 @@ enum VirtualContentType: Int, CaseIterable {
            return Beard2().getImage()
        case .goatee:
            return Goatee().getImage()
+       case .beauty1:
+           return Beauty1().getImage()
+       case .beauty2:
+           return Beauty2().getImage()
+       case .beauty3:
+           return Beauty3().getImage()
+       case .beauty4:
+           return Beauty4().getImage()
+       case .beauty5:
+           return Beauty5().getImage()
+       case .beauty6:
+           return Beauty6().getImage()
+       case .beauty7:
+           return Beauty7().getImage()
+       case .beauty8:
+           return Beauty8().getImage()
+       case .beauty9:
+           return Beauty9().getImage()
+       case .beauty10:
+           return Beauty10().getImage()
        }
     }
 }
