@@ -16,9 +16,9 @@ class FilterCollectionViewCell: UICollectionViewCell {
     
     func transformToLarge(){
         UIView.animate(withDuration: 0.2) {
-            self.transform = CGAffineTransform(scaleX: 1.50, y: 1.50)
-            self.layer.borderColor = UIColor.black.cgColor
-            self.layer.borderWidth = 1.3
+            self.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            self.layer.borderColor = UIColor.white.cgColor
+            self.layer.borderWidth = 5
         }
         let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()
@@ -26,7 +26,7 @@ class FilterCollectionViewCell: UICollectionViewCell {
     
     func transformToStandard(){
         UIView.animate(withDuration: 0.2) {
-            self.layer.borderWidth = 0
+            self.layer.borderWidth = 1
             self.transform = CGAffineTransform.identity
         }
     }

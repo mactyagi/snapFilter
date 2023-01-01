@@ -12,6 +12,7 @@ import ARKit
 class Beauty2: NSObject, VirtualContentController {
 
     var contentNode: SCNNode?
+    static let imageName = "beauty 2"
     
     /// - Tag: CreateARSCNFaceGeometry
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
@@ -39,10 +40,6 @@ class Beauty2: NSObject, VirtualContentController {
             let faceAnchor = anchor as? ARFaceAnchor
             else { return }
         faceGeometry.update(from: faceAnchor.geometry)
-    }
-    
-    func getImage() -> UIImage? {
-        nil
     }
 
 }

@@ -11,6 +11,9 @@ import SceneKit
 
 class Goatee: NSObject, VirtualContentController {
     
+    
+    static let imageName = "goatee"
+    
     var contentNode: SCNNode?
     
     var occlusionNode: SCNNode!
@@ -66,10 +69,5 @@ class Goatee: NSObject, VirtualContentController {
         
         
         
-    }
-    
-    
-    func getImage() -> UIImage? {
-        nil
     }
 }

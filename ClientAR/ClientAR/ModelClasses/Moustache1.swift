@@ -11,6 +11,8 @@ import SceneKit
 
 class Moustache1: NSObject, VirtualContentController {
     
+    static let imageName = "moustache_1"
+    
     var contentNode: SCNNode?
     
     var occlusionNode: SCNNode!

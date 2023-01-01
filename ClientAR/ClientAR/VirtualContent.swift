@@ -9,16 +9,10 @@ import ARKit
 import SceneKit
 
 enum VirtualContentType: Int, CaseIterable {
-    case nothing, beauty1, beauty2, beauty3, beauty4, beauty5, beauty6, beauty7, beauty8, beauty9, beauty10, goatee, beard2, beard1, moustache1, moustache2, ghoulMask, hieMask, kakashiHatake, kitsuneMask, sniperMask, sunglassesGold, sunglassesHeart, cyclops, thor, wolverine,  anime, beard, gasMask, sunglasses, superhero, transforms, texture, geometry, videoTexture, blendShape
+    case nothing,thor,  beauty1, beauty2, beauty3, beauty4, beauty5, beauty6, beauty7, beauty8, beauty9, beauty10, goatee, beard2, beard1, moustache1, moustache2, ghoulMask, hieMask, kakashiHatake, kitsuneMask, sniperMask, sunglassesGold, sunglassesHeart, cyclops,  wolverine,  anime, beard, gasMask, sunglasses, superhero, videoTexture, blendShape
     
     func makeController() -> VirtualContentController {
         switch self {
-        case .transforms:
-            return TransformVisualization()
-        case .texture:
-            return TexturedFace()
-        case .geometry:
-            return FaceOcclusionOverlay()
         case .videoTexture:
             return VideoTexturedFace()
         case .blendShape:
@@ -90,80 +84,74 @@ enum VirtualContentType: Int, CaseIterable {
     
     
     
-   func image() -> UIImage?{
+   func imageName() -> String{
        switch self {
-       case .transforms:
-           return TransformVisualization().getImage()
-       case .texture:
-           return TexturedFace().getImage()
-       case .geometry:
-           return FaceOcclusionOverlay().getImage()
        case .videoTexture:
-           return VideoTexturedFace().getImage()
+           return VideoTexturedFace.imageName
        case .blendShape:
-           return BlendShapeCharacter().getImage()
+           return BlendShapeCharacter.imageName
        case .nothing:
-           return NoFilter().getImage()
+           return ""
        case .gasMask:
-           return GasMask().getImage()
+           return GasMask.imageName
        case .sunglasses:
-           return Sunglasses().getImage()
+           return Sunglasses.imageName
        case .superhero:
-           return SuperHero().getImage()
+           return SuperHero.imageName
        case .beard:
-           return Beard().getImage()
+           return Beard.imageName
        case .anime:
-           return Anime().getImage()
+           return Anime.imageName
        case .thor:
-           return ThorHelmet().getImage()
+           return ThorHelmet.imageName
        case .wolverine:
-           return WolverineMask().getImage()
+           return WolverineMask.imageName
        case .cyclops:
-           return CyclopsMask().getImage()
+           return CyclopsMask.imageName
        case .sunglassesGold:
-           return SunglassesGold().getImage()
+           return SunglassesGold.imageName
        case .sunglassesHeart:
-           return SunglassesHeart().getImage()
+           return SunglassesHeart.imageName
        case .ghoulMask:
-           return GhoulMask().getImage()
+           return GhoulMask.imageName
        case .hieMask:
-           return HieMask().getImage()
+           return HieMask.imageName
        case .kakashiHatake:
-           return KakashiHatake().getImage()
+           return KakashiHatake.imageName
        case .kitsuneMask:
-           return KitsuneMask().getImage()
+           return KitsuneMask.imageName
        case .sniperMask:
-           return SniperMask().getImage()
+           return SniperMask.imageName
        case .moustache1:
-           return Moustache1().getImage()
+           return Moustache1.imageName
        case .moustache2:
-           return Moustache2().getImage()
+           return Moustache2.imageName
        case .beard1:
-           return Beard1().getImage()
+           return Beard1.imageName
        case .beard2:
-           return Beard2().getImage()
+           return Beard2.imageName
        case .goatee:
-           return Goatee().getImage()
+           return Goatee.imageName
        case .beauty1:
-           return Beauty1().getImage()
+           return Beauty1.imageName
        case .beauty2:
-           return Beauty2().getImage()
+           return Beauty2.imageName
        case .beauty3:
-           return Beauty3().getImage()
+           return Beauty3.imageName
        case .beauty4:
-           return Beauty4().getImage()
+           return Beauty4.imageName
        case .beauty5:
-           return Beauty5().getImage()
+           return Beauty5.imageName
        case .beauty6:
-           return Beauty6().getImage()
+           return Beauty6.imageName
        case .beauty7:
-           return Beauty7().getImage()
+           return Beauty7.imageName
        case .beauty8:
-           return Beauty8().getImage()
+           return Beauty8.imageName
        case .beauty9:
-           return Beauty9().getImage()
+           return Beauty9.imageName
        case .beauty10:
-           return Beauty10().getImage()
+           return Beauty10.imageName
        }
     }
 }
@@ -172,8 +160,6 @@ enum VirtualContentType: Int, CaseIterable {
 protocol VirtualContentController: ARSCNViewDelegate {
     /// The root node for the virtual content.
     var contentNode: SCNNode? { get set }
-    
-    func getImage() -> UIImage?
     
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode?
     

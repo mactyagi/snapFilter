@@ -7,111 +7,93 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06CD00D26F2E0C7760ABEEDF3BA72182 /* QuickTimeMov.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FCF15E190E405A7FC88EDE2E3AC587 /* QuickTimeMov.swift */; };
-		0D9EA750DAC9811DF7E6CE4859A26737 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		0FC2294D4412500D5F4D82F44852001D /* Generate+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F75CC297DB104958FCD18838E7E3DC /* Generate+GIF.swift */; };
-		1EA96FF159C49139E6B7CB1DA7CEFD2D /* ARVideoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 36F08545FDC5749DF96E39CE7E0E13DE /* ARVideoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		20CEB2DBF5B617A386A8B9407D1A7927 /* JPEG.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7D27C9FF71B1CA3F80B81C6BB633AF /* JPEG.swift */; };
-		2B52043820DD2341B2750B4D15BB1748 /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADB7FCDFE8A530B29418D1952E11A2 /* ARView.swift */; };
-		39F6A34FBA8B1B0ACC4B996380B4309B /* ARVideoOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E4371020AF7E9BBE67E9DB9744A49 /* ARVideoOptions.swift */; };
-		4D04D81CFEBE95F9EAE6863C68A62F83 /* RenderARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6948F3A98E66B20866F7CA4201D95 /* RenderARDelegate.swift */; };
-		53C8649644076B208A5C553CBCA0EFBB /* UIViewController+hasType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7A35B67F57F3D5BEB2C210EA50455 /* UIViewController+hasType.swift */; };
-		620F10A7197B781737F4158360792EF6 /* Generate+LivePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F97FF0E30735E59A1125D794D8B731 /* Generate+LivePhoto.swift */; };
-		6EFADCA52ACAD2C3FEA56C09F18BBD3E /* CGImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B659FCBC32A57AD395A32A56B09B48 /* CGImage+Resize.swift */; };
-		721D4751DAE99D4E579A3FA9820B2697 /* RenderAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0774D020EFFB0BF7F377EA8A1312EE /* RenderAR.swift */; };
-		791BBDB458AF1A62C43D967B5D86227F /* RecordAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89CB24556BAB2ED90EB7A61A29F22A /* RecordAR.swift */; };
-		88ECF9A22D1DC1C7E9F7C9DFB3EB232D /* ARVideoKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FC0A40573002B4B2395F6D9B183788F2 /* ARVideoKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9490CF00B76C5FE264302D3867588552 /* WeakProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466ECD54AD25BC744F296DF268D9F78A /* WeakProxy.swift */; };
-		9907828F56566FD0899560D1C7752CDF /* Pods-ClientAR-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1277178179ADEABA3F9476CF43E8A967 /* Pods-ClientAR-dummy.m */; };
-		9BC536DD176B0C06984EF5CACF889001 /* video.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = EF201A0FEA60D5BA813829F5C2973695 /* video.scnassets */; };
-		9F76690C17F800AF094CC83DBDCB6C91 /* RecordARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF453CC971E9464E9343FF88A6796135 /* RecordARDelegate.swift */; };
-		A85F989D41C8F315ED25AE4769305DAD /* PHLivePhotoPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238AFC2F7C2F2258D8654DB605B5417 /* PHLivePhotoPlus.swift */; };
-		B5D44E2152ACD0D6F6578C5470376112 /* UIView+isType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E0E1672362F5E0E55B4405B0228951 /* UIView+isType.swift */; };
-		B9668B8C206EE03DB454D027479D2CFC /* ViewAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69AB22AC8C89D593F26792E4430F7EF /* ViewAR.swift */; };
-		CBD78AC1534816992376AFAE16A6A5FF /* ARVideoKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D83695A2B6A189297597259D72BE82E /* ARVideoKit-dummy.m */; };
-		D658C5298CED78F5DBD81F39CF24C61C /* RecordAR+PhotoRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785BDC5AE76F41238D289E90600BC97 /* RecordAR+PhotoRender.swift */; };
-		EA0030915530AA719701E7096F3C897B /* WritAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D5E6B77A5B6E047BD874BFCF64A1C2 /* WritAR.swift */; };
-		EC1591CC6097411C8EA5C486342DA0DA /* UIImage+VideoBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295DDC26B0FC15DD8E301D0CAF0672BA /* UIImage+VideoBuffer.swift */; };
-		EEE146C12E9E7690481CC10A8F404BCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		F07102D8F0360A90989FCC3B36CD37C4 /* ARInputViewOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07453909CF6D211A6EACA952038EC3 /* ARInputViewOptions.swift */; };
-		F92829ECF70629B4D3116B7A0D9F3AA5 /* Pods-ClientAR-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E3C268EF4008FA5D7D78AB98A5B1E5D2 /* Pods-ClientAR-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		131A45EEEDF4A95A2DB298D576315614 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		303EB2F8B7C64529EB8CEB12ACCBA9EB /* ARCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CFA09D421EBD1C578F8C4A9400E30F /* ARCapture.swift */; };
+		419A509696C16602CA34AD44EAC317F7 /* ARFrameGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F48A33E013006481AA9DD1B80C6FF3D /* ARFrameGenerator.swift */; };
+		6411F1410FC794775C464C9EA3CB9225 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		65061823CFCC6BA3BEA47FE83A3CEFA2 /* ARCapture-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 536D25B0945CBF505466FBFC4CDBC394 /* ARCapture-dummy.m */; };
+		7BE4752846709BEBA39E3A2EA667D8F8 /* Pods-ClientAR-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E3C268EF4008FA5D7D78AB98A5B1E5D2 /* Pods-ClientAR-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A290AE72F37444A666709CDC91CDAC0F /* ARAssetWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE6BD1918FA723F2FAC8CA7C0673DB3 /* ARAssetWriter.swift */; };
+		D9E10BFD6DA0BF85FDA3190A97E9567B /* ARCapture-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6741B4DC0CC89DA330B2B363D4BDD1C6 /* ARCapture-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF4AD630D287301777F56B4B3AF8B016 /* Pods-ClientAR-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1277178179ADEABA3F9476CF43E8A967 /* Pods-ClientAR-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B7744CB12FF0B6020AF86E9B9975621A /* PBXContainerItemProxy */ = {
+		603E477C3C9FD7EB4D682DC39CDEE924 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F45CE91AABA41FC6A2D62AA39C6E4FBD;
-			remoteInfo = ARVideoKit;
+			remoteGlobalIDString = 54662A80412FEA7CD834CE87F5E8B2D7;
+			remoteInfo = ARCapture;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01F97FF0E30735E59A1125D794D8B731 /* Generate+LivePhoto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Generate+LivePhoto.swift"; path = "ARVideoKit/Rendering/Live Photo/Generate+LivePhoto.swift"; sourceTree = "<group>"; };
 		09F001283F448DF12B7F31F6E471B587 /* Pods-ClientAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClientAR.release.xcconfig"; sourceTree = "<group>"; };
-		0EADB7FCDFE8A530B29418D1952E11A2 /* ARView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ARView.swift; path = ARVideoKit/Sources/ARView.swift; sourceTree = "<group>"; };
-		0F9E4371020AF7E9BBE67E9DB9744A49 /* ARVideoOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ARVideoOptions.swift; path = ARVideoKit/Enumerations/ARVideoOptions.swift; sourceTree = "<group>"; };
-		10D5E6B77A5B6E047BD874BFCF64A1C2 /* WritAR.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WritAR.swift; path = ARVideoKit/Rendering/Writer/WritAR.swift; sourceTree = "<group>"; };
 		1277178179ADEABA3F9476CF43E8A967 /* Pods-ClientAR-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ClientAR-dummy.m"; sourceTree = "<group>"; };
 		1C6B91AF828AE5B75F7798184123F15C /* Pods-ClientAR */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ClientAR"; path = Pods_ClientAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		25195FF281B9A1CA4EB9BD98EE56CF37 /* ARVideoKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ARVideoKit.modulemap; sourceTree = "<group>"; };
-		27FCF15E190E405A7FC88EDE2E3AC587 /* QuickTimeMov.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickTimeMov.swift; path = "ARVideoKit/Rendering/Live Photo/LoveLiver/QuickTimeMov.swift"; sourceTree = "<group>"; };
-		295DDC26B0FC15DD8E301D0CAF0672BA /* UIImage+VideoBuffer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+VideoBuffer.swift"; path = "ARVideoKit/Extensions/UIImage+VideoBuffer.swift"; sourceTree = "<group>"; };
+		1F48A33E013006481AA9DD1B80C6FF3D /* ARFrameGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ARFrameGenerator.swift; path = Source/ARFrameGenerator.swift; sourceTree = "<group>"; };
 		2C3B0A6187FF539B499695D19B927A42 /* Pods-ClientAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClientAR.debug.xcconfig"; sourceTree = "<group>"; };
-		36F08545FDC5749DF96E39CE7E0E13DE /* ARVideoKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ARVideoKit.h; path = ARVideoKit/ARVideoKit.h; sourceTree = "<group>"; };
-		3B3895A25BFC7F13361F782845BEB0B5 /* ARVideoKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ARVideoKit-Info.plist"; sourceTree = "<group>"; };
 		3BF8B2D5B7BBC732D8692252B52E9D46 /* Pods-ClientAR.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ClientAR.modulemap"; sourceTree = "<group>"; };
-		42B659FCBC32A57AD395A32A56B09B48 /* CGImage+Resize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGImage+Resize.swift"; path = "ARVideoKit/Extensions/CGImage+Resize.swift"; sourceTree = "<group>"; };
-		466ECD54AD25BC744F296DF268D9F78A /* WeakProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WeakProxy.swift; path = ARVideoKit/Utils/WeakProxy.swift; sourceTree = "<group>"; };
+		438B5CE01F38C1A3D749989EEBC16971 /* ARCapture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ARCapture.release.xcconfig; sourceTree = "<group>"; };
+		45CFA09D421EBD1C578F8C4A9400E30F /* ARCapture.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ARCapture.swift; path = Source/ARCapture.swift; sourceTree = "<group>"; };
+		536D25B0945CBF505466FBFC4CDBC394 /* ARCapture-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ARCapture-dummy.m"; sourceTree = "<group>"; };
 		5C62FC14A1447897F6BC8D2CAAD43B87 /* Pods-ClientAR-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ClientAR-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6741B4DC0CC89DA330B2B363D4BDD1C6 /* ARCapture-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ARCapture-umbrella.h"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		79C6948F3A98E66B20866F7CA4201D95 /* RenderARDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RenderARDelegate.swift; path = ARVideoKit/Protocols/RenderARDelegate.swift; sourceTree = "<group>"; };
-		7D83695A2B6A189297597259D72BE82E /* ARVideoKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ARVideoKit-dummy.m"; sourceTree = "<group>"; };
-		9238AFC2F7C2F2258D8654DB605B5417 /* PHLivePhotoPlus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PHLivePhotoPlus.swift; path = "ARVideoKit/Rendering/Live Photo/PHLivePhotoPlus.swift"; sourceTree = "<group>"; };
+		7748B15DE505A7F152C964C5AD0D43A1 /* ARCapture-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ARCapture-Info.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B33203ECCF809B7170160D412DA6D9D5 /* ARVideoKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ARVideoKit.release.xcconfig; sourceTree = "<group>"; };
-		BF453CC971E9464E9343FF88A6796135 /* RecordARDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecordARDelegate.swift; path = ARVideoKit/Protocols/RecordARDelegate.swift; sourceTree = "<group>"; };
-		C785BDC5AE76F41238D289E90600BC97 /* RecordAR+PhotoRender.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "RecordAR+PhotoRender.swift"; path = "ARVideoKit/Extensions/RecordAR+PhotoRender.swift"; sourceTree = "<group>"; };
-		C97D9D0A3DDFB9940DAE9778F7993196 /* ARVideoKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ARVideoKit.debug.xcconfig; sourceTree = "<group>"; };
+		A17C42249AE20A5BE0EE5400EC2BE254 /* ARCapture.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ARCapture.modulemap; sourceTree = "<group>"; };
+		C22B42F256C3BEBF65199C4EB3A89294 /* ARCapture-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ARCapture-prefix.pch"; sourceTree = "<group>"; };
 		CC7CD66BF257CBD0C37A9F48B63344DE /* Pods-ClientAR-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClientAR-frameworks.sh"; sourceTree = "<group>"; };
-		CC7D27C9FF71B1CA3F80B81C6BB633AF /* JPEG.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JPEG.swift; path = "ARVideoKit/Rendering/Live Photo/LoveLiver/JPEG.swift"; sourceTree = "<group>"; };
-		CD6F6A59EED48D93C7A3EC0FC77F5982 /* ARVideoKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ARVideoKit-prefix.pch"; sourceTree = "<group>"; };
-		CF07453909CF6D211A6EACA952038EC3 /* ARInputViewOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ARInputViewOptions.swift; path = ARVideoKit/Enumerations/ARInputViewOptions.swift; sourceTree = "<group>"; };
-		D3E0E1672362F5E0E55B4405B0228951 /* UIView+isType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+isType.swift"; path = "ARVideoKit/Extensions/UIView+isType.swift"; sourceTree = "<group>"; };
-		D8F75CC297DB104958FCD18838E7E3DC /* Generate+GIF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Generate+GIF.swift"; path = "ARVideoKit/Rendering/GIF/Generate+GIF.swift"; sourceTree = "<group>"; };
 		D93F232F2F594FE06FE8B60F3987CA0D /* Pods-ClientAR-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ClientAR-acknowledgements.plist"; sourceTree = "<group>"; };
 		DDDC94B995AC5278D35D097CC3D6E6A1 /* Pods-ClientAR-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ClientAR-Info.plist"; sourceTree = "<group>"; };
-		DF0774D020EFFB0BF7F377EA8A1312EE /* RenderAR.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RenderAR.swift; path = ARVideoKit/Rendering/RenderAR.swift; sourceTree = "<group>"; };
-		DFD7A35B67F57F3D5BEB2C210EA50455 /* UIViewController+hasType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+hasType.swift"; path = "ARVideoKit/Extensions/UIViewController+hasType.swift"; sourceTree = "<group>"; };
+		DDE6BD1918FA723F2FAC8CA7C0673DB3 /* ARAssetWriter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ARAssetWriter.swift; path = Source/ARAssetWriter.swift; sourceTree = "<group>"; };
 		E3C268EF4008FA5D7D78AB98A5B1E5D2 /* Pods-ClientAR-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ClientAR-umbrella.h"; sourceTree = "<group>"; };
-		EF201A0FEA60D5BA813829F5C2973695 /* video.scnassets */ = {isa = PBXFileReference; includeInIndex = 1; name = video.scnassets; path = ARVideoKit/Assets/video.scnassets; sourceTree = "<group>"; };
-		F69AB22AC8C89D593F26792E4430F7EF /* ViewAR.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewAR.swift; path = ARVideoKit/Sources/ViewAR.swift; sourceTree = "<group>"; };
-		FAAABB68A7FA1FB1A251480879617C6A /* ARVideoKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ARVideoKit; path = ARVideoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC0A40573002B4B2395F6D9B183788F2 /* ARVideoKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ARVideoKit-umbrella.h"; sourceTree = "<group>"; };
-		FF89CB24556BAB2ED90EB7A61A29F22A /* RecordAR.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecordAR.swift; path = ARVideoKit/Sources/RecordAR.swift; sourceTree = "<group>"; };
+		F04B7DC4CF6AA105AB547A2505FFD1C8 /* ARCapture */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ARCapture; path = ARCapture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1000D305D760F2DFAE38ECE717947F2 /* ARCapture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ARCapture.debug.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		372CFC2F1462AD5529645F10A3C08332 /* Frameworks */ = {
+		0EE5F4EFCC65239440A8295C81F39E30 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D9EA750DAC9811DF7E6CE4859A26737 /* Foundation.framework in Frameworks */,
+				131A45EEEDF4A95A2DB298D576315614 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD8BBF6D6610FF250E6A49757A29D858 /* Frameworks */ = {
+		28032C74D88EDFCD472056249C41C317 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEE146C12E9E7690481CC10A8F404BCF /* Foundation.framework in Frameworks */,
+				6411F1410FC794775C464C9EA3CB9225 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		004A7680C1C50A44D7647F5FEF749FB2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				16082F68715CAF2C528A0FA5CB57B8CC /* ARCapture */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		16082F68715CAF2C528A0FA5CB57B8CC /* ARCapture */ = {
+			isa = PBXGroup;
+			children = (
+				DDE6BD1918FA723F2FAC8CA7C0673DB3 /* ARAssetWriter.swift */,
+				45CFA09D421EBD1C578F8C4A9400E30F /* ARCapture.swift */,
+				1F48A33E013006481AA9DD1B80C6FF3D /* ARFrameGenerator.swift */,
+				B20A3BC48E7249406808E33C2541F916 /* Support Files */,
+			);
+			name = ARCapture;
+			path = ARCapture;
+			sourceTree = "<group>";
+		};
 		24030F6C52D18A1B5CD305B049B30DD8 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,14 +119,6 @@
 			path = "Target Support Files/Pods-ClientAR";
 			sourceTree = "<group>";
 		};
-		369A4C2EA758E081DA5FC71E336E264A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				EF201A0FEA60D5BA813829F5C2973695 /* video.scnassets */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,64 +127,25 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		696584180EFBD3156376A7C2FB6B77DC /* ARVideoKit */ = {
+		B20A3BC48E7249406808E33C2541F916 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CF07453909CF6D211A6EACA952038EC3 /* ARInputViewOptions.swift */,
-				36F08545FDC5749DF96E39CE7E0E13DE /* ARVideoKit.h */,
-				0F9E4371020AF7E9BBE67E9DB9744A49 /* ARVideoOptions.swift */,
-				0EADB7FCDFE8A530B29418D1952E11A2 /* ARView.swift */,
-				42B659FCBC32A57AD395A32A56B09B48 /* CGImage+Resize.swift */,
-				D8F75CC297DB104958FCD18838E7E3DC /* Generate+GIF.swift */,
-				01F97FF0E30735E59A1125D794D8B731 /* Generate+LivePhoto.swift */,
-				CC7D27C9FF71B1CA3F80B81C6BB633AF /* JPEG.swift */,
-				9238AFC2F7C2F2258D8654DB605B5417 /* PHLivePhotoPlus.swift */,
-				27FCF15E190E405A7FC88EDE2E3AC587 /* QuickTimeMov.swift */,
-				FF89CB24556BAB2ED90EB7A61A29F22A /* RecordAR.swift */,
-				C785BDC5AE76F41238D289E90600BC97 /* RecordAR+PhotoRender.swift */,
-				BF453CC971E9464E9343FF88A6796135 /* RecordARDelegate.swift */,
-				DF0774D020EFFB0BF7F377EA8A1312EE /* RenderAR.swift */,
-				79C6948F3A98E66B20866F7CA4201D95 /* RenderARDelegate.swift */,
-				295DDC26B0FC15DD8E301D0CAF0672BA /* UIImage+VideoBuffer.swift */,
-				D3E0E1672362F5E0E55B4405B0228951 /* UIView+isType.swift */,
-				DFD7A35B67F57F3D5BEB2C210EA50455 /* UIViewController+hasType.swift */,
-				F69AB22AC8C89D593F26792E4430F7EF /* ViewAR.swift */,
-				466ECD54AD25BC744F296DF268D9F78A /* WeakProxy.swift */,
-				10D5E6B77A5B6E047BD874BFCF64A1C2 /* WritAR.swift */,
-				369A4C2EA758E081DA5FC71E336E264A /* Resources */,
-				8FEEE11C83C21511176E0135361203EF /* Support Files */,
-			);
-			name = ARVideoKit;
-			path = ARVideoKit;
-			sourceTree = "<group>";
-		};
-		8FEEE11C83C21511176E0135361203EF /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				25195FF281B9A1CA4EB9BD98EE56CF37 /* ARVideoKit.modulemap */,
-				7D83695A2B6A189297597259D72BE82E /* ARVideoKit-dummy.m */,
-				3B3895A25BFC7F13361F782845BEB0B5 /* ARVideoKit-Info.plist */,
-				CD6F6A59EED48D93C7A3EC0FC77F5982 /* ARVideoKit-prefix.pch */,
-				FC0A40573002B4B2395F6D9B183788F2 /* ARVideoKit-umbrella.h */,
-				C97D9D0A3DDFB9940DAE9778F7993196 /* ARVideoKit.debug.xcconfig */,
-				B33203ECCF809B7170160D412DA6D9D5 /* ARVideoKit.release.xcconfig */,
+				A17C42249AE20A5BE0EE5400EC2BE254 /* ARCapture.modulemap */,
+				536D25B0945CBF505466FBFC4CDBC394 /* ARCapture-dummy.m */,
+				7748B15DE505A7F152C964C5AD0D43A1 /* ARCapture-Info.plist */,
+				C22B42F256C3BEBF65199C4EB3A89294 /* ARCapture-prefix.pch */,
+				6741B4DC0CC89DA330B2B363D4BDD1C6 /* ARCapture-umbrella.h */,
+				F1000D305D760F2DFAE38ECE717947F2 /* ARCapture.debug.xcconfig */,
+				438B5CE01F38C1A3D749989EEBC16971 /* ARCapture.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/ARVideoKit";
+			path = "../Target Support Files/ARCapture";
 			sourceTree = "<group>";
 		};
-		91507DFD051ED81A747066B9A5222ACD /* Pods */ = {
+		BD10B459AB6EE894372431B7BEA58F51 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				696584180EFBD3156376A7C2FB6B77DC /* ARVideoKit */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		A2433F8E0D165DD6F9DDC8F55BE39A14 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FAAABB68A7FA1FB1A251480879617C6A /* ARVideoKit */,
+				F04B7DC4CF6AA105AB547A2505FFD1C8 /* ARCapture */,
 				1C6B91AF828AE5B75F7798184123F15C /* Pods-ClientAR */,
 			);
 			name = Products;
@@ -221,8 +156,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				91507DFD051ED81A747066B9A5222ACD /* Pods */,
-				A2433F8E0D165DD6F9DDC8F55BE39A14 /* Products */,
+				004A7680C1C50A44D7647F5FEF749FB2 /* Pods */,
+				BD10B459AB6EE894372431B7BEA58F51 /* Products */,
 				24030F6C52D18A1B5CD305B049B30DD8 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -238,20 +173,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		9D9F03B1EF58140BBD65C2DE2EFC0B8B /* Headers */ = {
+		5650001328465B56156A5E2AE2F8A57C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F92829ECF70629B4D3116B7A0D9F3AA5 /* Pods-ClientAR-umbrella.h in Headers */,
+				D9E10BFD6DA0BF85FDA3190A97E9567B /* ARCapture-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D7ADB33D05E7060A2ED9724E7B201338 /* Headers */ = {
+		71069DB3D5B335A64501391E0BEED0C1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EA96FF159C49139E6B7CB1DA7CEFD2D /* ARVideoKit.h in Headers */,
-				88ECF9A22D1DC1C7E9F7C9DFB3EB232D /* ARVideoKit-umbrella.h in Headers */,
+				7BE4752846709BEBA39E3A2EA667D8F8 /* Pods-ClientAR-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,39 +194,39 @@
 /* Begin PBXNativeTarget section */
 		088E8F70D2723C653B011A4CDF35AA46 /* Pods-ClientAR */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0D8435F517858929A1EFD4D62CC132B9 /* Build configuration list for PBXNativeTarget "Pods-ClientAR" */;
+			buildConfigurationList = 8FFC8D4CD278D16B9487ADAEBAC12E3F /* Build configuration list for PBXNativeTarget "Pods-ClientAR" */;
 			buildPhases = (
-				9D9F03B1EF58140BBD65C2DE2EFC0B8B /* Headers */,
-				C54A3B13C90846A6C73FBEAE9303D7AA /* Sources */,
-				CD8BBF6D6610FF250E6A49757A29D858 /* Frameworks */,
-				EAEAE99BD1BCB15A282F9164FC008F7F /* Resources */,
+				71069DB3D5B335A64501391E0BEED0C1 /* Headers */,
+				5AFEFFF82326B8AF4DC3CF2D1917A4E0 /* Sources */,
+				0EE5F4EFCC65239440A8295C81F39E30 /* Frameworks */,
+				72751670CB20E144F0F060E5E7B8867B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7EC93EE4FC39D4E38D0BEF52D8203BCD /* PBXTargetDependency */,
+				176D451B69780EC2032A52CFCC197B8D /* PBXTargetDependency */,
 			);
 			name = "Pods-ClientAR";
 			productName = Pods_ClientAR;
 			productReference = 1C6B91AF828AE5B75F7798184123F15C /* Pods-ClientAR */;
 			productType = "com.apple.product-type.framework";
 		};
-		F45CE91AABA41FC6A2D62AA39C6E4FBD /* ARVideoKit */ = {
+		54662A80412FEA7CD834CE87F5E8B2D7 /* ARCapture */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E438AE5E181639643520E7E6B1D1DDCE /* Build configuration list for PBXNativeTarget "ARVideoKit" */;
+			buildConfigurationList = 50022405D9E052BE832849089A9BD15E /* Build configuration list for PBXNativeTarget "ARCapture" */;
 			buildPhases = (
-				D7ADB33D05E7060A2ED9724E7B201338 /* Headers */,
-				615427F11C58BD504482733766D748FA /* Sources */,
-				372CFC2F1462AD5529645F10A3C08332 /* Frameworks */,
-				9048B2850F498361D6E97EC4E9E4776D /* Resources */,
+				5650001328465B56156A5E2AE2F8A57C /* Headers */,
+				AC76A27CA0FDB512D82C95DC654BF9FC /* Sources */,
+				28032C74D88EDFCD472056249C41C317 /* Frameworks */,
+				9B5C13B516BF1B3A1A833A0F7B07B63E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ARVideoKit;
-			productName = ARVideoKit;
-			productReference = FAAABB68A7FA1FB1A251480879617C6A /* ARVideoKit */;
+			name = ARCapture;
+			productName = ARCapture;
+			productReference = F04B7DC4CF6AA105AB547A2505FFD1C8 /* ARCapture */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -313,26 +247,25 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = A2433F8E0D165DD6F9DDC8F55BE39A14 /* Products */;
+			productRefGroup = BD10B459AB6EE894372431B7BEA58F51 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F45CE91AABA41FC6A2D62AA39C6E4FBD /* ARVideoKit */,
+				54662A80412FEA7CD834CE87F5E8B2D7 /* ARCapture */,
 				088E8F70D2723C653B011A4CDF35AA46 /* Pods-ClientAR */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9048B2850F498361D6E97EC4E9E4776D /* Resources */ = {
+		72751670CB20E144F0F060E5E7B8867B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BC536DD176B0C06984EF5CACF889001 /* video.scnassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EAEAE99BD1BCB15A282F9164FC008F7F /* Resources */ = {
+		9B5C13B516BF1B3A1A833A0F7B07B63E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -342,92 +275,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		615427F11C58BD504482733766D748FA /* Sources */ = {
+		5AFEFFF82326B8AF4DC3CF2D1917A4E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F07102D8F0360A90989FCC3B36CD37C4 /* ARInputViewOptions.swift in Sources */,
-				CBD78AC1534816992376AFAE16A6A5FF /* ARVideoKit-dummy.m in Sources */,
-				39F6A34FBA8B1B0ACC4B996380B4309B /* ARVideoOptions.swift in Sources */,
-				2B52043820DD2341B2750B4D15BB1748 /* ARView.swift in Sources */,
-				6EFADCA52ACAD2C3FEA56C09F18BBD3E /* CGImage+Resize.swift in Sources */,
-				0FC2294D4412500D5F4D82F44852001D /* Generate+GIF.swift in Sources */,
-				620F10A7197B781737F4158360792EF6 /* Generate+LivePhoto.swift in Sources */,
-				20CEB2DBF5B617A386A8B9407D1A7927 /* JPEG.swift in Sources */,
-				A85F989D41C8F315ED25AE4769305DAD /* PHLivePhotoPlus.swift in Sources */,
-				06CD00D26F2E0C7760ABEEDF3BA72182 /* QuickTimeMov.swift in Sources */,
-				791BBDB458AF1A62C43D967B5D86227F /* RecordAR.swift in Sources */,
-				D658C5298CED78F5DBD81F39CF24C61C /* RecordAR+PhotoRender.swift in Sources */,
-				9F76690C17F800AF094CC83DBDCB6C91 /* RecordARDelegate.swift in Sources */,
-				721D4751DAE99D4E579A3FA9820B2697 /* RenderAR.swift in Sources */,
-				4D04D81CFEBE95F9EAE6863C68A62F83 /* RenderARDelegate.swift in Sources */,
-				EC1591CC6097411C8EA5C486342DA0DA /* UIImage+VideoBuffer.swift in Sources */,
-				B5D44E2152ACD0D6F6578C5470376112 /* UIView+isType.swift in Sources */,
-				53C8649644076B208A5C553CBCA0EFBB /* UIViewController+hasType.swift in Sources */,
-				B9668B8C206EE03DB454D027479D2CFC /* ViewAR.swift in Sources */,
-				9490CF00B76C5FE264302D3867588552 /* WeakProxy.swift in Sources */,
-				EA0030915530AA719701E7096F3C897B /* WritAR.swift in Sources */,
+				FF4AD630D287301777F56B4B3AF8B016 /* Pods-ClientAR-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C54A3B13C90846A6C73FBEAE9303D7AA /* Sources */ = {
+		AC76A27CA0FDB512D82C95DC654BF9FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9907828F56566FD0899560D1C7752CDF /* Pods-ClientAR-dummy.m in Sources */,
+				A290AE72F37444A666709CDC91CDAC0F /* ARAssetWriter.swift in Sources */,
+				303EB2F8B7C64529EB8CEB12ACCBA9EB /* ARCapture.swift in Sources */,
+				65061823CFCC6BA3BEA47FE83A3CEFA2 /* ARCapture-dummy.m in Sources */,
+				419A509696C16602CA34AD44EAC317F7 /* ARFrameGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7EC93EE4FC39D4E38D0BEF52D8203BCD /* PBXTargetDependency */ = {
+		176D451B69780EC2032A52CFCC197B8D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = ARVideoKit;
-			target = F45CE91AABA41FC6A2D62AA39C6E4FBD /* ARVideoKit */;
-			targetProxy = B7744CB12FF0B6020AF86E9B9975621A /* PBXContainerItemProxy */;
+			name = ARCapture;
+			target = 54662A80412FEA7CD834CE87F5E8B2D7 /* ARCapture */;
+			targetProxy = 603E477C3C9FD7EB4D682DC39CDEE924 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		086573AAA473AADB4BF3791B6663C5A5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09F001283F448DF12B7F31F6E471B587 /* Pods-ClientAR.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ClientAR/Pods-ClientAR-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ClientAR/Pods-ClientAR.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		30E0B9EFD9A5C45D0D351231E81B30B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -490,7 +368,116 @@
 			};
 			name = Release;
 		};
-		7F1207D3217B6CB77279E93EB06184C5 /* Debug */ = {
+		4D0CD71688C8A3BD0A3FC1408B06931E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 438B5CE01F38C1A3D749989EEBC16971 /* ARCapture.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ARCapture/ARCapture-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ARCapture/ARCapture-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ARCapture/ARCapture.modulemap";
+				PRODUCT_MODULE_NAME = ARCapture;
+				PRODUCT_NAME = ARCapture;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8A35AB58CEE9C1E071B7F58DEA202461 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1000D305D760F2DFAE38ECE717947F2 /* ARCapture.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ARCapture/ARCapture-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ARCapture/ARCapture-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ARCapture/ARCapture.modulemap";
+				PRODUCT_MODULE_NAME = ARCapture;
+				PRODUCT_NAME = ARCapture;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9E6EDA8B42123B5BA59DE52C8B2114A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09F001283F448DF12B7F31F6E471B587 /* Pods-ClientAR.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ClientAR/Pods-ClientAR-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ClientAR/Pods-ClientAR.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F051E18B6781388AF74B7CA3C91D4D8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2C3B0A6187FF539B499695D19B927A42 /* Pods-ClientAR.debug.xcconfig */;
 			buildSettings = {
@@ -521,77 +508,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9BDA917EFCD631332BB08674B1057423 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B33203ECCF809B7170160D412DA6D9D5 /* ARVideoKit.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ARVideoKit/ARVideoKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ARVideoKit/ARVideoKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/ARVideoKit/ARVideoKit.modulemap";
-				PRODUCT_MODULE_NAME = ARVideoKit;
-				PRODUCT_NAME = ARVideoKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D26991B594D6C3C2CAA208D4723D5F94 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C97D9D0A3DDFB9940DAE9778F7993196 /* ARVideoKit.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ARVideoKit/ARVideoKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ARVideoKit/ARVideoKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/ARVideoKit/ARVideoKit.modulemap";
-				PRODUCT_MODULE_NAME = ARVideoKit;
-				PRODUCT_NAME = ARVideoKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -667,15 +583,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0D8435F517858929A1EFD4D62CC132B9 /* Build configuration list for PBXNativeTarget "Pods-ClientAR" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7F1207D3217B6CB77279E93EB06184C5 /* Debug */,
-				086573AAA473AADB4BF3791B6663C5A5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -685,11 +592,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E438AE5E181639643520E7E6B1D1DDCE /* Build configuration list for PBXNativeTarget "ARVideoKit" */ = {
+		50022405D9E052BE832849089A9BD15E /* Build configuration list for PBXNativeTarget "ARCapture" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D26991B594D6C3C2CAA208D4723D5F94 /* Debug */,
-				9BDA917EFCD631332BB08674B1057423 /* Release */,
+				8A35AB58CEE9C1E071B7F58DEA202461 /* Debug */,
+				4D0CD71688C8A3BD0A3FC1408B06931E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FFC8D4CD278D16B9487ADAEBAC12E3F /* Build configuration list for PBXNativeTarget "Pods-ClientAR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F051E18B6781388AF74B7CA3C91D4D8A /* Debug */,
+				9E6EDA8B42123B5BA59DE52C8B2114A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

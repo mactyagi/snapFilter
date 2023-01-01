@@ -11,6 +11,8 @@ import SceneKit
 
 class SuperHero: NSObject, VirtualContentController {
     
+    static let imageName = "superhero"
+    
     var contentNode: SCNNode?
     
     var occlusionNode: SCNNode!
@@ -55,11 +57,6 @@ class SuperHero: NSObject, VirtualContentController {
             else { return }
         
         faceGeometry.update(from: faceAnchor.geometry)
-    }
-    
-    
-    func getImage() -> UIImage? {
-        nil
     }
 
 }

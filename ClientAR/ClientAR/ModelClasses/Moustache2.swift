@@ -11,6 +11,8 @@ import SceneKit
 
 class Moustache2: NSObject, VirtualContentController {
     
+    static let imageName = "moustache_2_"
+    
     var contentNode: SCNNode?
     
     var occlusionNode: SCNNode!
@@ -62,10 +64,5 @@ class Moustache2: NSObject, VirtualContentController {
         childNode?.position = SCNVector3(newPos)
         
         faceGeometry.update(from: faceAnchor.geometry)
-    }
-    
-    
-    func getImage() -> UIImage? {
-        nil
     }
 }

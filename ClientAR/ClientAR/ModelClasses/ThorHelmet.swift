@@ -11,6 +11,8 @@ import SceneKit
 
 class ThorHelmet: NSObject, VirtualContentController {
     
+    static let imageName = "thor_s_helmet"
+    
     var contentNode: SCNNode?
     
     var occlusionNode: SCNNode!
@@ -38,7 +40,7 @@ class ThorHelmet: NSObject, VirtualContentController {
         occlusionNode.renderingOrder = -1
         
         // Add 3D asset positioned to appear as "glasses".
-        let faceOverlayContent = SCNReferenceNode(named: "thorHelmet")
+        let faceOverlayContent = SCNReferenceNode(named: "thor'sHelmet")
         // Assign a random color to the text.
         let material = SCNMaterial()
         material.diffuse.contents = UIImage(named: "thor's helmet_BaseColor")
@@ -61,10 +63,5 @@ class ThorHelmet: NSObject, VirtualContentController {
         else { return }
         
         faceGeometry.update(from: faceAnchor.geometry)
-    }
-    
-    
-    func getImage() -> UIImage? {
-        nil
     }
 }

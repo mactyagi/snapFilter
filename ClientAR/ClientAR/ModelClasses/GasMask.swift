@@ -11,6 +11,8 @@ import SceneKit
 
 class GasMask: NSObject, VirtualContentController {
     
+    static let imageName = "gas-mask-3d-model-low-poly-obj-fbx-stl-blend-dae"
+    
     var contentNode: SCNNode?
     
     var occlusionNode: SCNNode!

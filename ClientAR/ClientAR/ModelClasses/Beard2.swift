@@ -10,6 +10,7 @@ import ARKit
 import SceneKit
 
 class Beard2: NSObject, VirtualContentController {
+    static let imageName = "beard_2"
     
     var contentNode: SCNNode?
     

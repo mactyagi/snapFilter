@@ -11,6 +11,8 @@ import SceneKit
 
 class CyclopsMask: NSObject, VirtualContentController {
     
+    static let imageName = "cyclops_mask"
+    
     var contentNode: SCNNode?
     
     var occlusionNode: SCNNode!
@@ -56,10 +58,5 @@ class CyclopsMask: NSObject, VirtualContentController {
         else { return }
         
         faceGeometry.update(from: faceAnchor.geometry)
-    }
-    
-    
-    func getImage() -> UIImage? {
-        nil
     }
 }

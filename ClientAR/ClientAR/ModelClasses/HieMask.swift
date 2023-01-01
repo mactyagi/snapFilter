@@ -10,6 +10,8 @@ import ARKit
 import SceneKit
 class HieMask: NSObject, VirtualContentController {
     
+    static let imageName = "hei_mask"
+    
     var contentNode: SCNNode?
     
     var occlusionNode: SCNNode!
@@ -50,10 +52,5 @@ class HieMask: NSObject, VirtualContentController {
         else { return }
         
         faceGeometry.update(from: faceAnchor.geometry)
-    }
-    
-    
-    func getImage() -> UIImage? {
-        nil
     }
 }

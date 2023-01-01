@@ -14,6 +14,8 @@ import SceneKit
 
 class SniperMask: NSObject, VirtualContentController {
     
+    static let imageName = "Sniper_Mask"
+    
     var contentNode: SCNNode?
     
     var occlusionNode: SCNNode!
@@ -59,10 +61,5 @@ class SniperMask: NSObject, VirtualContentController {
         else { return }
         
         faceGeometry.update(from: faceAnchor.geometry)
-    }
-    
-    
-    func getImage() -> UIImage? {
-        nil
     }
 }

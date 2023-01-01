@@ -11,6 +11,8 @@ import SceneKit
 
 class GhoulMask: NSObject, VirtualContentController {
     
+    static let imageName = "ghoul_mask"
+    
     var contentNode: SCNNode?
     
     var occlusionNode: SCNNode!
@@ -54,10 +56,5 @@ class GhoulMask: NSObject, VirtualContentController {
         else { return }
         
         faceGeometry.update(from: faceAnchor.geometry)
-    }
-    
-    
-    func getImage() -> UIImage? {
-        nil
     }
 }

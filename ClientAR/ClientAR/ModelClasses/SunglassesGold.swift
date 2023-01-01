@@ -11,6 +11,10 @@ import SceneKit
 
 class SunglassesGold: NSObject, VirtualContentController {
     
+    
+    static let imageName = "sunglasses_gold_"
+    
+    
     var contentNode: SCNNode?
     
     var occlusionNode: SCNNode!
@@ -56,10 +60,5 @@ class SunglassesGold: NSObject, VirtualContentController {
         else { return }
         
         faceGeometry.update(from: faceAnchor.geometry)
-    }
-    
-    
-    func getImage() -> UIImage? {
-        nil
     }
 }

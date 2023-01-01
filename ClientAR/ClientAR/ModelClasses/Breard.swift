@@ -11,6 +11,8 @@ import SceneKit
 
 class Beard: NSObject, VirtualContentController {
     
+    static let imageName = "beard_2"
+    
     var contentNode: SCNNode?
     
     var occlusionNode: SCNNode!
@@ -61,10 +63,5 @@ class Beard: NSObject, VirtualContentController {
         faceGeometry.update(from: faceAnchor.geometry)
     }
     
-    
-    func getImage() -> UIImage? {
-        nil
-    }
-
 }
 

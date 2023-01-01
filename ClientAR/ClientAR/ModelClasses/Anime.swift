@@ -11,6 +11,8 @@ import SceneKit
 
 class Anime: NSObject, VirtualContentController {
     
+    static let imageName = "anime_BaseColor"
+    
     var contentNode: SCNNode?
     
     var occlusionNode: SCNNode!
@@ -51,16 +53,10 @@ class Anime: NSObject, VirtualContentController {
     
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         guard let faceGeometry = occlusionNode.geometry as? ARSCNFaceGeometry,
-            let faceAnchor = anchor as? ARFaceAnchor
-            else { return }
+              let faceAnchor = anchor as? ARFaceAnchor
+        else { return }
         
         faceGeometry.update(from: faceAnchor.geometry)
     }
-    
-    
-    func getImage() -> UIImage? {
-        nil
-    }
-
 }
 

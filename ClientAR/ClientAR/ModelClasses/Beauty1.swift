@@ -13,6 +13,8 @@ class Beauty1: NSObject, VirtualContentController {
 
     var contentNode: SCNNode?
     
+    static let imageName = "beauty 1"
+    
     /// - Tag: CreateARSCNFaceGeometry
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         guard let sceneView = renderer as? ARSCNView,

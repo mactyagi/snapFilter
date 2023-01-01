@@ -12,6 +12,7 @@ import ARKit
 class Beauty9: NSObject, VirtualContentController {
 
     var contentNode: SCNNode?
+    static let imageName = "beauty 9"
     
     /// - Tag: CreateARSCNFaceGeometry
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
@@ -40,9 +41,4 @@ class Beauty9: NSObject, VirtualContentController {
             else { return }
         faceGeometry.update(from: faceAnchor.geometry)
     }
-    
-    func getImage() -> UIImage? {
-        nil
-    }
-
 }

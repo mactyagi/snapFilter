@@ -12,6 +12,8 @@ import ARKit
 import SceneKit
 class KitsuneMask: NSObject, VirtualContentController {
     
+    static let imageName = "Kitsune_Mask_"
+    
     var contentNode: SCNNode?
     
     var occlusionNode: SCNNode!
@@ -59,10 +61,5 @@ class KitsuneMask: NSObject, VirtualContentController {
         else { return }
         
         faceGeometry.update(from: faceAnchor.geometry)
-    }
-    
-    
-    func getImage() -> UIImage? {
-        nil
     }
 }

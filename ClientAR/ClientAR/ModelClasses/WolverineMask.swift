@@ -11,6 +11,8 @@ import SceneKit
 
 class WolverineMask: NSObject, VirtualContentController {
     
+    static let imageName = "wolverine_mask"
+    
     var contentNode: SCNNode?
     
     var occlusionNode: SCNNode!
@@ -59,10 +61,5 @@ class WolverineMask: NSObject, VirtualContentController {
         else { return }
         
         faceGeometry.update(from: faceAnchor.geometry)
-    }
-    
-    
-    func getImage() -> UIImage? {
-        nil
     }
 }

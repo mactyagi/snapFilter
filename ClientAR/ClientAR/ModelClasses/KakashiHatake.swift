@@ -12,6 +12,8 @@ import ARKit
 import SceneKit
 class KakashiHatake: NSObject, VirtualContentController {
     
+    static let imageName = "Kakashi_Hatake"
+    
     var contentNode: SCNNode?
     
     var occlusionNode: SCNNode!
@@ -60,10 +62,5 @@ class KakashiHatake: NSObject, VirtualContentController {
         else { return }
         
         faceGeometry.update(from: faceAnchor.geometry)
-    }
-    
-    
-    func getImage() -> UIImage? {
-        nil
     }
 }
